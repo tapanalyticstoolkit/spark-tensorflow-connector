@@ -1,0 +1,15 @@
+Discovery starting.
+Discovery completed in 195 milliseconds.
+Run starting. Expected test count is: 5
+TensorFlowTest:
+Spark-tk TensorFlow module
+- should Test Import/Export (2 seconds, 801 milliseconds)
+- should Encode given Row as TensorFlow example (6 milliseconds)
+- should Throw null pointer exception for a vector with null values during Encode (0 milliseconds)
+- should Decode given TensorFlow Example as Row (2 milliseconds)
+- should Check infer schema (20 milliseconds)
+Run completed in 5 seconds, 210 milliseconds.
+Total number of tests run: 5
+Suites: completed 2, aborted 0
+Tests: succeeded 5, failed 0, canceled 0, ignored 0, pending 0
+All tests passed.

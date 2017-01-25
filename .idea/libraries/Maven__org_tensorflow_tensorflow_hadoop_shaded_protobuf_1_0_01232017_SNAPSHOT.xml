@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.tensorflow:tensorflow-hadoop:shaded-protobuf:1.0-01232017-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/tensorflow/tensorflow-hadoop/1.0-01232017-SNAPSHOT/tensorflow-hadoop-1.0-01232017-SNAPSHOT-shaded-protobuf.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/tensorflow/tensorflow-hadoop/1.0-01232017-SNAPSHOT/tensorflow-hadoop-1.0-01232017-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/tensorflow/tensorflow-hadoop/1.0-01232017-SNAPSHOT/tensorflow-hadoop-1.0-01232017-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
