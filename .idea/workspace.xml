@@ -5,56 +5,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/spark-tf-core/target/surefire-reports/TEST-org.scalatest.tools.DiscoverySuite-bbe8d4f0-31e5-49e3-a963-f91eefcd44d6.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/spark-tf-core/target/surefire-reports/TEST-tensorflow.TensorFlowTest.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/spark-tf-core/target/surefire-reports/TestSuite.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$2.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$3.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$importTensorflow$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$importTensorflow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$2.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$3.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4$$anonfun$apply$2.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4$$anonfun$apply$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4$$anonfun$apply$3.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4$$anonfun$apply$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$5.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$org$tensorflow$TensorflowInferSchema$$inferRowType$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$org$tensorflow$TensorflowInferSchema$$inferRowType$1$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$org$tensorflow$TensorflowInferSchema$$inferRowType$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$org$tensorflow$TensorflowInferSchema$$inferRowType$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseDouble$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseDouble$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseFloat$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseFloat$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseInteger$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseInteger$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseLong$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseLong$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$$anonfun$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$$anonfun$decodeTfRecord$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$$anonfun$decodeTfRecord$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowEncoder$$anonfun$encodeTfRecord$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowEncoder$$anonfun$encodeTfRecord$1$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowEncoder$$anonfun$encodeTfRecord$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowEncoder$$anonfun$encodeTfRecord$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/TfRecordRowDecoder.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/TfRecordRowDecoder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/spark-tf-core-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/spark-tf-core/target/spark-tf-core-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$2$$anonfun$apply$mcV$sp$6.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$2$$anonfun$apply$mcV$sp$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$2.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$3$$anonfun$apply$mcV$sp$7.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$3$$anonfun$apply$mcV$sp$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$3.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$4.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$5$$anonfun$apply$mcV$sp$8.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$5$$anonfun$apply$mcV$sp$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$5.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ImportTensorflow.scala" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ImportTensorflow.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowEncoder.scala" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowEncoder.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala" afterPath="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/analysis/compile" afterPath="$PROJECT_DIR$/spark-tf-core/target/analysis/compile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/analysis/test-compile" afterPath="$PROJECT_DIR$/spark-tf-core/target/analysis/test-compile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/maven.properties" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/maven.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/spark-tf-core/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" />
     </list>
     <ignored path="spark-tensorflow-connector.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -293,108 +243,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="tensorflow" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spark-tensorflow-connector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spark-tensorflow-connector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spark-tf-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tensorflow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spark-tensorflow-connector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spark-tensorflow-connector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spark-tf-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tensorflow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serde" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spark-tensorflow-connector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spark-tensorflow-connector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spark-tf-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tensorflow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serde" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DefaultTfRecordRowDecoder.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1239,7 +1087,7 @@
       <workItem from="1485285188011" duration="583000" />
       <workItem from="1485285792996" duration="10227000" />
       <workItem from="1485372702628" duration="12756000" />
-      <workItem from="1485387604195" duration="3223000" />
+      <workItem from="1485387604195" duration="3546000" />
     </task>
     <servers />
   </component>
@@ -1276,7 +1124,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26789000" />
+    <option name="totallyTimeSpent" value="27112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1920" height="1138" extended-state="0" />
@@ -1295,7 +1143,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22575599" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22575599" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
