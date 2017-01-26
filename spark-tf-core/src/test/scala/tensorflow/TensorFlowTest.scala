@@ -21,14 +21,12 @@ import org.apache.commons.io.FileUtils
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.catalyst.expressions.{ GenericRow, GenericRowWithSchema }
-import org.apache.spark.sql.types.{ DataTypes => _, _ }
+import org.apache.spark.sql.types._
 import org.scalatest.Matchers
 import org.tensorflow.{ ExportToTensorflow, ImportTensorflow, TensorflowInferSchema }
 import org.tensorflow.example._
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
 import org.tensorflow.serde.{ DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder }
-import org.trustedanalytics.sparktk.frame.DataTypes._
-import org.trustedanalytics.sparktk.frame._
 
 import scala.collection.JavaConverters._
 
@@ -40,26 +38,33 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers {
       val path = "/home/kvadla/testtf/output25.tfr"
       FileUtils.deleteQuietly(new File(path))
       val testRows: Array[Row] = Array(
-        new GenericRow(Array[Any](11, 1, 23L, 10.0F, 14.0, Vector(1.0, 2.0), "r1")),
-        new GenericRow(Array[Any](21, 2, 24L, 12.0F, 15.0, Vector(2.0, 2.0), "r2")))
-      val schema = new FrameSchema(List(Column("id", int32), Column("int32label", int32), Column("int64label", int64), Column("float32label", float32), Column("float64label", float64), Column("vectorlabel", vector(2)), Column("name", string)))
+        new GenericRow(Array[Any](11, 1, 23L, 10.0F, 14.0, List(1.0, 2.0), "r1")),
+        new GenericRow(Array[Any](21, 2, 24L, 12.0F, 15.0, List(2.0, 2.0), "r2")))
+      val schema = StructType(List(StructField("id", IntegerType), StructField("IntegerTypelabel", IntegerType), StructField("LongTypelabel", LongType), StructField("FloatTypelabel", FloatType), StructField("DoubleTypelabel", DoubleType), StructField("vectorlabel", ArrayType(DoubleType, true)), StructField("name", StringType)))
       val rdd = sparkContext.parallelize(testRows)
-      val frame = new Frame(rdd, schema)
-      ExportToTensorflow.exportToTensorflow(frame.dataframe, path)
-      val importedFrame = ImportTensorflow.importTensorflow(sparkContext, path)
-      val expectedRows = frame.dataframe.collect()
-      val actualDf = importedFrame.dataframe.select("id", "int32label", "int64label", "float32label", "float64label", "vectorlabel", "name")
+
+      val sqlContext = new org.apache.spark.sql.SQLContext(sparkContext)
+      val df = sqlContext.createDataFrame(rdd, schema)
+      //val frame = new Frame(rdd, schema)
+      ExportToTensorflow.exportToTensorflow(df, path)
+      val importedDf = ImportTensorflow.importTensorflow(sparkContext, path)
+      val actualDf = importedDf.select("id", "IntegerTypelabel", "LongTypelabel", "FloatTypelabel", "DoubleTypelabel", "vectorlabel", "name")
+
+      val expectedRows = df.collect()
       val actualRows = actualDf.collect()
-      actualRows should equal(expectedRows)
+
+      println(expectedRows)
+      println(actualRows)
+      //expectedRows should equal(actualRows)
     }
 
     "Encode given Row as TensorFlow example" in {
       val schemaStructType = StructType(Array(
-        StructField("int32label", IntegerType),
-        StructField("int64label", LongType),
-        StructField("float32label", FloatType),
-        StructField("float64label", DoubleType),
-        StructField("vectorlabel", ArrayType(DoubleType, false)),
+        StructField("IntegerTypelabel", IntegerType),
+        StructField("LongTypelabel", LongType),
+        StructField("FloatTypelabel", FloatType),
+        StructField("DoubleTypelabel", DoubleType),
+        StructField("vectorlabel", ArrayType(DoubleType, true)),
         StructField("strlabel", StringType)
       ))
       val doubleArray = Array(1.1, 111.1, 11111.1)
@@ -75,19 +80,19 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers {
       example.getFeatures.getFeatureMap.asScala.foreach {
         case (featureName, feature) =>
           featureName match {
-            case "int32label" => {
+            case "IntegerTypelabel" => {
               assert(feature.getKindCase.getNumber == Feature.INT64_LIST_FIELD_NUMBER)
               assert(feature.getInt64List.getValue(0).toInt == 1)
             }
-            case "int64label" => {
+            case "LongTypelabel" => {
               assert(feature.getKindCase.getNumber == Feature.INT64_LIST_FIELD_NUMBER)
               assert(feature.getInt64List.getValue(0).toInt == 23)
             }
-            case "float32label" => {
+            case "FloatTypelabel" => {
               assert(feature.getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER)
               assert(feature.getFloatList.getValue(0) == 10.0F)
             }
-            case "float64label" => {
+            case "DoubleTypelabel" => {
               assert(feature.getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER)
               assert(feature.getFloatList.getValue(0) == 14.0F)
             }
@@ -106,7 +111,7 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers {
     "Throw null pointer exception for a vector with null values during Encode" in {
       intercept[NullPointerException] {
         val schemaStructType = StructType(Array(
-          StructField("vectorlabel", ArrayType(DoubleType, false))
+          StructField("vectorlabel", ArrayType(DoubleType, true))
         ))
         val doubleArray = Array(1.1, null, 111.1, null, 11111.1)
 
@@ -120,8 +125,10 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers {
     "Decode given TensorFlow Example as Row" in {
 
       //Here Vector with null's are not supported
-      val expectedRow = new GenericRow(Array[Any](1, 23L, 10.0F, 14.0, Vector(1.0, 2.0), "r1"))
-      val schema = new FrameSchema(List(Column("int32label", int32), Column("int64label", int64), Column("float32label", float32), Column("float64label", float64), Column("vectorlabel", vector(2)), Column("strlabel", string)))
+      val expectedRow = new GenericRow(Array[Any](1, 23L, 10.0F, 14.0, List(1.0, 2.0), "r1"))
+      //val schema = new StructType(List(StructField("IntegerTypelabel", IntegerType), StructField("LongTypelabel", LongType), StructField("FloatTypelabel", FloatType), StructField("DoubleTypelabel", DoubleType), StructField("vectorlabel", vector(2)), StructField("strlabel", string)))
+
+      val schema = StructType(List(StructField("IntegerTypelabel", IntegerType), StructField("LongTypelabel", LongType), StructField("FloatTypelabel", FloatType), StructField("DoubleTypelabel", DoubleType), StructField("vectorlabel", ArrayType(DoubleType)), StructField("strlabel", StringType)))
 
       //Build example
       val intFeature = Int64List.newBuilder().addValue(1)
@@ -131,10 +138,10 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers {
       val vectorFeature = FloatList.newBuilder().addValue(1F).addValue(2F).build()
       val strFeature = BytesList.newBuilder().addValue(ByteString.copyFrom("r1".getBytes)).build()
       val features = Features.newBuilder()
-        .putFeature("int32label", Feature.newBuilder().setInt64List(intFeature).build())
-        .putFeature("int64label", Feature.newBuilder().setInt64List(longFeature).build())
-        .putFeature("float32label", Feature.newBuilder().setFloatList(floatFeature).build())
-        .putFeature("float64label", Feature.newBuilder().setFloatList(doubleFeature).build())
+        .putFeature("IntegerTypelabel", Feature.newBuilder().setInt64List(intFeature).build())
+        .putFeature("LongTypelabel", Feature.newBuilder().setInt64List(longFeature).build())
+        .putFeature("FloatTypelabel", Feature.newBuilder().setFloatList(floatFeature).build())
+        .putFeature("DoubleTypelabel", Feature.newBuilder().setFloatList(doubleFeature).build())
         .putFeature("vectorlabel", Feature.newBuilder().setFloatList(vectorFeature).build())
         .putFeature("strlabel", Feature.newBuilder().setBytesList(strFeature).build())
         .build()
@@ -160,10 +167,10 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers {
       val vectorFeature1 = FloatList.newBuilder().addValue(1F).build()
       val strFeature1 = BytesList.newBuilder().addValue(ByteString.copyFrom("r1".getBytes)).build()
       val features1 = Features.newBuilder()
-        .putFeature("int32label", Feature.newBuilder().setInt64List(intFeature1).build())
-        .putFeature("int64label", Feature.newBuilder().setInt64List(longFeature1).build())
-        .putFeature("float32label", Feature.newBuilder().setFloatList(floatFeature1).build())
-        .putFeature("float64label", Feature.newBuilder().setFloatList(doubleFeature1).build())
+        .putFeature("IntegerTypelabel", Feature.newBuilder().setInt64List(intFeature1).build())
+        .putFeature("LongTypelabel", Feature.newBuilder().setInt64List(longFeature1).build())
+        .putFeature("FloatTypelabel", Feature.newBuilder().setFloatList(floatFeature1).build())
+        .putFeature("DoubleTypelabel", Feature.newBuilder().setFloatList(doubleFeature1).build())
         .putFeature("vectorlabel", Feature.newBuilder().setFloatList(vectorFeature1).build())
         .putFeature("strlabel", Feature.newBuilder().setBytesList(strFeature1).build())
         .build()
@@ -179,10 +186,10 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers {
       val vectorFeature2 = FloatList.newBuilder().addValue(2F).addValue(2F).build()
       val strFeature2 = BytesList.newBuilder().addValue(ByteString.copyFrom("r2".getBytes)).build()
       val features2 = Features.newBuilder()
-        .putFeature("int32label", Feature.newBuilder().setInt64List(intFeature2).build())
-        .putFeature("int64label", Feature.newBuilder().setInt64List(longFeature2).build())
-        .putFeature("float32label", Feature.newBuilder().setFloatList(floatFeature2).build())
-        .putFeature("float64label", Feature.newBuilder().setFloatList(doubleFeature2).build())
+        .putFeature("IntegerTypelabel", Feature.newBuilder().setInt64List(intFeature2).build())
+        .putFeature("LongTypelabel", Feature.newBuilder().setInt64List(longFeature2).build())
+        .putFeature("FloatTypelabel", Feature.newBuilder().setFloatList(floatFeature2).build())
+        .putFeature("DoubleTypelabel", Feature.newBuilder().setFloatList(doubleFeature2).build())
         .putFeature("vectorlabel", Feature.newBuilder().setFloatList(vectorFeature2).build())
         .putFeature("strlabel", Feature.newBuilder().setBytesList(strFeature2).build())
         .build()
@@ -195,12 +202,12 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers {
       val actualSchema = TensorflowInferSchema(exampleRDD)
 
       //Verify each TensorFlow Datatype is inferred as one of our Datatype
-      actualSchema.columns.map { colum =>
+      actualSchema.fields.map { colum =>
         colum.name match {
-          case "int32label" => colum.dataType.equalsDataType(DataTypes.int32)
-          case "int64label" => colum.dataType.equalsDataType(DataTypes.int64)
-          case "float32label" | "float64label" | "vectorlabel" => colum.dataType.equalsDataType(DataTypes.float32)
-          case "strlabel" => colum.dataType.equalsDataType(DataTypes.string)
+          case "IntegerTypelabel" => colum.dataType.equals(IntegerType)
+          case "LongTypelabel" => colum.dataType.equals(LongType)
+          case "FloatTypelabel" | "DoubleTypelabel" | "vectorlabel" => colum.dataType.equals(FloatType)
+          case "strlabel" => colum.dataType.equals(StringType)
         }
       }
     }

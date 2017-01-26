@@ -2,9 +2,12 @@ package org.tensorflow
 
 import org.apache.spark.rdd.RDD
 import org.tensorflow.example._
-import org.trustedanalytics.sparktk.frame.DataTypes.{ DataType, float32, float64, int32, int64 }
-import org.trustedanalytics.sparktk.frame.{ Column, FrameSchema }
-import org.trustedanalytics.sparktk.frame.DataTypes
+//import org.trustedanalytics.sparktk.frame.DataTypes.{ DataType, float32, float64, int32, int64 }
+//import org.trustedanalytics.sparktk.frame.{ Column, FrameSchema }
+//import org.trustedanalytics.sparktk.frame.DataTypes
+
+import org.apache.spark.sql._
+import org.apache.spark.sql.types._
 
 import scala.collection.mutable.Map
 import scala.collection.JavaConverters._
@@ -19,19 +22,19 @@ object TensorflowInferSchema {
    *     2. Merge row types to find common type
    *     3. Replace any null types with string type
    */
-  def apply(exampleRdd: RDD[Example]): FrameSchema = {
+  def apply(exampleRdd: RDD[Example]): StructType = {
     val startType: Map[String, DataType] = Map.empty[String, DataType]
     val rootTypes: Map[String, DataType] = exampleRdd.aggregate(startType)(inferRowType, mergeFieldTypes)
     val columnsList = rootTypes.map {
       case (featureName, featureType) =>
         if (featureType == null) {
-          new Column(featureName, DataTypes.string)
+          StructField(featureName, StringType)
         }
         else {
-          new Column(featureName, featureType)
+          StructField(featureName, featureType)
         }
     }
-    new FrameSchema(columnsList.toSeq)
+    StructType(columnsList.toSeq)
   }
 
   private def inferRowType(schemaSoFar: Map[String, DataType], next: Example): Map[String, DataType] = {
@@ -64,7 +67,7 @@ object TensorflowInferSchema {
   private def inferField(feature: Feature): DataType = {
     feature.getKindCase.getNumber match {
       case Feature.BYTES_LIST_FIELD_NUMBER => {
-        DataTypes.str
+        StringType
       }
       case Feature.INT64_LIST_FIELD_NUMBER => {
         parseInt64List(feature)
@@ -83,7 +86,7 @@ object TensorflowInferSchema {
       null
     }
     else if (length > 1) {
-      DataTypes.vector(length)
+      ArrayType(LongType)
     }
     else {
       val fieldValue = int64List(0).toString
@@ -98,7 +101,7 @@ object TensorflowInferSchema {
       null
     }
     else if (length > 1) {
-      DataTypes.vector(length)
+      ArrayType(DoubleType)
     }
     else {
       val fieldValue = floatList(0).toString
@@ -107,14 +110,14 @@ object TensorflowInferSchema {
   }
 
   private def parseInteger(field: String): DataType = if (allCatch.opt(field.toInt).isDefined) {
-    DataTypes.int32
+    IntegerType
   }
   else {
     parseLong(field)
   }
 
   private def parseLong(field: String): DataType = if (allCatch.opt(field.toLong).isDefined) {
-    DataTypes.int64
+    LongType
   }
   else {
     throw new RuntimeException("Unable to parse field datatype to int64...")
@@ -122,7 +125,7 @@ object TensorflowInferSchema {
 
   private def parseFloat(field: String): DataType = {
     if ((allCatch opt field.toFloat).isDefined) {
-      DataTypes.float32
+      FloatType
     }
     else {
       parseDouble(field)
@@ -130,7 +133,7 @@ object TensorflowInferSchema {
   }
 
   private def parseDouble(field: String): DataType = if (allCatch.opt(field.toDouble).isDefined) {
-    DataTypes.float64
+    DoubleType
   }
   else {
     throw new RuntimeException("Unable to parse field datatype to float64...")
@@ -140,20 +143,21 @@ object TensorflowInferSchema {
    * [[org.apache.spark.sql.catalyst.analysis.HiveTypeCoercion]]
    */
   private val numericPrecedence: IndexedSeq[DataType] =
-    IndexedSeq[DataType](int32,
-      int64,
-      float32,
-      float64,
-      DataTypes.str)
+    IndexedSeq[DataType](IntegerType,
+      LongType,
+      FloatType,
+      DoubleType,
+      StringType)
 
   private def getNumericPrecedence(dataType: DataType): Int = {
     dataType match {
-      case x if x.equals(DataTypes.int32) => 0
-      case x if x.equals(DataTypes.int64) => 1
-      case x if x.equals(DataTypes.float32) => 2
-      case x if x.equals(DataTypes.float64) => 3
-      case x if x.isVector => 4
-      case x if x.equals(DataTypes.string) => 5
+      case x if x.equals(IntegerType) => 0
+      case x if x.equals(LongType) => 1
+      case x if x.equals(FloatType) => 2
+      case x if x.equals(DoubleType) => 3
+      case x if x.equals(ArrayType(LongType)) => 4
+      case x if x.equals(ArrayType(DoubleType)) => 5
+      case x if x.equals(StringType) => 6
       case _ => throw new RuntimeException("Unable to get the precedence for given datatype...")
     }
   }
@@ -166,9 +170,10 @@ object TensorflowInferSchema {
     case (t1, t2) if t1 == t2 => Some(t1)
     case (null, t2) => Some(t2)
     case (t1, null) => Some(t1)
-    case (t1, t2) if t1.isVector && t2.isVector => Some(DataTypes.vector(Math.max(t1.length, t2.length)))
-    case (DataTypes.string, t2) => Some(DataTypes.string)
-    case (t1, DataTypes.string) => Some(DataTypes.string)
+    case (t1, t2) if t1.equals(ArrayType(LongType)) && t2.equals(ArrayType(DoubleType)) => Some(ArrayType(DoubleType))
+    case (t1, t2) if t1.equals(ArrayType(DoubleType)) && t2.equals(ArrayType(LongType)) => Some(ArrayType(DoubleType))
+    case (StringType, t2) => Some(StringType)
+    case (t1, StringType) => Some(StringType)
 
     // Promote numeric types to the highest of the two and all numeric types to unlimited decimal
     case (t1, t2) =>

@@ -18,8 +18,8 @@ package org.tensorflow.serde
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.types._
+import org.tensorflow.DataTypesConvertor
 import org.tensorflow.example._
-import org.trustedanalytics.sparktk.frame.DataTypes
 
 trait TfRecordRowEncoder {
   /**
@@ -45,22 +45,22 @@ object DefaultTfRecordRowEncoder extends TfRecordRowEncoder {
       case (structField, index) =>
         structField.dataType match {
           case IntegerType => {
-            val intResult = Int64List.newBuilder().addValue(DataTypes.toLong(row.getInt(index))).build()
+            val intResult = Int64List.newBuilder().addValue(row.getInt(index).toLong).build()
             features.putFeature(structField.name, Feature.newBuilder().setInt64List(intResult).build())
           }
           case LongType => {
-            val intResult = Int64List.newBuilder().addValue(DataTypes.toLong(row.getLong(index))).build()
+            val intResult = Int64List.newBuilder().addValue(row.getLong(index)).build()
             features.putFeature(structField.name, Feature.newBuilder().setInt64List(intResult).build())
           }
           case FloatType => {
-            val floatResult = FloatList.newBuilder().addValue(DataTypes.toFloat(row.getFloat(index))).build()
+            val floatResult = FloatList.newBuilder().addValue(row.getFloat(index)).build()
             features.putFeature(structField.name, Feature.newBuilder().setFloatList(floatResult).build())
           }
           case DoubleType => {
-            val floatResult = FloatList.newBuilder().addValue(DataTypes.toFloat(row.getDouble(index))).build()
+            val floatResult = FloatList.newBuilder().addValue(row.getDouble(index).toFloat).build()
             features.putFeature(structField.name, Feature.newBuilder().setFloatList(floatResult).build())
           }
-          case ArrayType(DoubleType, false) => {
+          case ArrayType(DoubleType, true) => {
 
             val wrappedArr = row.get(index) match {
               case x: scala.collection.mutable.WrappedArray[_] => x.toArray[Any]
@@ -73,7 +73,7 @@ object DefaultTfRecordRowEncoder extends TfRecordRowEncoder {
                 throw new NullPointerException("FloatList with null values are not supported")
               }
               else {
-                DataTypes.toFloat(x)
+                DataTypesConvertor.toFloat(x)
               }
               floatListBuilder.addValue(y)
             })

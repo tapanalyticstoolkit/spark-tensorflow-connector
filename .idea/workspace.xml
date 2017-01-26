@@ -2,293 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c30a17-ad4d-429b-b669-154bdfe4762a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_analysis_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_commons_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_tree_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_util_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bcmail_jdk14_138.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bcprov_jdk14_138.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_carrotsearch_hppc_0_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_clearspring_analytics_stream_2_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_sparkts_sparkts_0_3_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_databricks_spark_csv_2_10_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_esotericsoftware_kryo_kryo_2_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_esotericsoftware_minlog_minlog_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_esotericsoftware_reflectasm_reflectasm_shaded_1_07.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_scala_2_10_2_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_core_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_rwl_jtransforms_2_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_findbugs_findbugs_annotations_1_3_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_14_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_servlet_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_concurrentlinkedhashmap_concurrentlinkedhashmap_lru_1_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_42.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jolbox_bonecp_0_8_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_lowagie_itext_2_1_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ning_compress_lzf_1_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_orientechnologies_orientdb_client_2_1_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_orientechnologies_orientdb_core_2_1_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_orientechnologies_orientdb_enterprise_2_1_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_orientechnologies_orientdb_graphdb_2_1_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_orientechnologies_orientdb_object_2_1_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_orientechnologies_orientdb_server_2_1_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_orientechnologies_orientdb_tools_2_1_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_guice_1_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_paranamer_paranamer_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_tinkerpop_blueprints_blueprints_core_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_tinkerpop_gremlin_gremlin_groovy_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_tinkerpop_gremlin_gremlin_java_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_tinkerpop_pipes_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_chill_2_10_0_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_chill_java_0_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_parquet_column_1_5_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_parquet_common_1_5_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_parquet_encoding_1_5_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_parquet_format_2_1_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_parquet_hadoop_1_5_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_parquet_jackson_1_5_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_actor_2_10_2_3_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_remote_2_10_2_3_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_slf4j_2_10_2_3_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_config_1_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_univocity_univocity_parsers_1_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_core_1_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_el_commons_el_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__graphframes_graphframes_0_1_0_spark1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_dropwizard_metrics_metrics_core_3_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_dropwizard_metrics_metrics_graphite_3_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_dropwizard_metrics_metrics_json_3_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_dropwizard_metrics_metrics_jvm_3_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_8_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_0_29_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_spray_spray_json_2_10_1_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_jdo_jdo_api_3_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_jta_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jfree_jcommon_1_0_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jfree_jfreechart_1_0_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_apache_log4j_extras_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_hydromatic_eigenbase_properties_1_1_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jets3t_jets3t_0_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_platform_4_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_jpountz_lz4_lz4_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_razorvine_pyrolite_4_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_opencsv_opencsv_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_py4j_py4j_0_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_f2j_arpack_combined_all_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_ST4_4_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_1_7_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_ipc_1_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_ipc_tests_1_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_mapred_hadoop2_1_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_calcite_calcite_avatica_1_2_0_incubating.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_calcite_calcite_core_1_2_0_incubating.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_calcite_calcite_linq4j_1_2_0_incubating.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_csv_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_framework_2_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_recipes_2_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derby_10_11_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_directory_api_api_asn1_api_1_0_0_M20.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_directory_api_api_util_1_0_0_M20.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_directory_server_apacheds_i18n_2_0_0_M15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_directory_server_apacheds_kerberos_codec_2_0_0_M15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_annotations_2_6_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_client_2_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_hdfs_2_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_mapreduce_client_app_2_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_mapreduce_client_common_2_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_mapreduce_client_core_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_mapreduce_client_jobclient_2_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_mapreduce_client_shuffle_2_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_api_2_6_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_client_2_6_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_common_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_common_2_6_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_web_proxy_2_6_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hbase_hbase_annotations_1_2_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hbase_hbase_common_1_2_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hbase_hbase_protocol_1_2_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_exec_1_1_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_metastore_1_1_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core_3_2_0_incubating.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ivy_ivy_2_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_mahout_commons_commons_cli_2_0_mahout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_mahout_mahout_core_0_9_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_mahout_mahout_math_0_9_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_3_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_mesos_mesos_shaded_protobuf_0_21_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_catalyst_2_10_1_6_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_core_2_10_1_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_graphx_2_10_1_6_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_hive_2_10_1_6_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_launcher_2_10_1_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_mllib_2_10_1_6_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_network_common_2_10_1_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_network_shuffle_2_10_1_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_sql_2_10_1_6_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_streaming_2_10_1_6_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_unsafe_2_10_1_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_yarn_2_10_1_6_0_cdh5_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_thrift_libfb303_0_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_thrift_libthrift_0_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xbean_xbean_asm5_shaded_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_xmlgraphics_commons_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_cloudera_logredactor_logredactor_1_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_1_8_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_all_2_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_janino_commons_compiler_2_7_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_janino_janino_2_7_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_3_0_22.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_datanucleus_datanucleus_api_jdo_3_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_datanucleus_datanucleus_core_3_2_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_datanucleus_datanucleus_rdbms_3_2_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dcm4che_dcm4che_conf_core_api_3_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dcm4che_dcm4che_core_3_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dcm4che_dcm4che_dict_3_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dcm4che_dcm4che_image_3_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dcm4che_dcm4che_imageio_3_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dcm4che_dcm4che_net_3_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dcm4che_tool_dcm4che_tool_common_3_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dcm4che_tool_dcm4che_tool_dcm2xml_3_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dcm4che_tool_dcm4che_tool_xml2dcm_3_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_3_0_0_v201112011016.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_fusesource_jansi_jansi_1_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_fusesource_leveldbjni_leveldbjni_all_1_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_htrace_htrace_core_3_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_16_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_joda_joda_convert_1_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_core_3_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jpmml_pmml_agent_1_1_15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jpmml_pmml_model_1_1_15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jpmml_pmml_schema_1_1_15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json4s_json4s_ast_2_10_3_2_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json4s_json4s_core_2_10_3_2_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json4s_json4s_jackson_2_10_3_2_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_26.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_26.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_parboiled_parboiled_core_1_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_parboiled_parboiled_scala_2_10_1_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_roaringbitmap_RoaringBitmap_0_5_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_compiler_2_10_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_10_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_10_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_10_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scalap_2_10_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scalamacros_quasiquotes_2_10_2_0_0_M8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scalanlp_breeze_2_10_0_11_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scalanlp_breeze_macros_2_10_0_11_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scalanlp_breeze_viz_2_10_0_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scalatest_scalatest_2_10_2_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spark_project_spark_unused_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spire_math_spire_2_10_0_7_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spire_math_spire_macros_2_10_0_7_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tachyonproject_tachyon_client_0_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tachyonproject_tachyon_underfs_hdfs_0_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tachyonproject_tachyon_underfs_local_0_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tachyonproject_tachyon_underfs_s3_0_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tensorflow_tensorflow_hadoop_shaded_protobuf_1_0_01232017_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_threeten_threeten_extra_0_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_trustedanalytics_model_archive_format_0_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_trustedanalytics_model_archive_interfaces_0_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_trustedanalytics_sparktk_core_master_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tukaani_xz_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_uncommons_maths_uncommons_maths_1_2_2a.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__oro_oro_2_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tomcat_jasper_compiler_5_5_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tomcat_jasper_runtime_5_5_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tw_edu_ntu_csie_libsvm_3_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlenc_xmlenc_0_52.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkstyle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/license-header.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tensorflow-connector.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tf-core/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tf-core/spark-tf-core.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ExportToTensorflow.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ImportTensorflow.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowEncoder.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TestingSparkContext.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TestingSparkContextWordSpec.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spark-tf-core/target/surefire-reports/TEST-org.scalatest.tools.DiscoverySuite-bbe8d4f0-31e5-49e3-a963-f91eefcd44d6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spark-tf-core/target/surefire-reports/TEST-tensorflow.TensorFlowTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spark-tf-core/target/surefire-reports/TestSuite.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$2.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$3.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$importTensorflow$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$$anonfun$importTensorflow$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/ImportTensorflow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$2.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$3.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4$$anonfun$apply$2.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4$$anonfun$apply$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4$$anonfun$apply$3.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4$$anonfun$apply$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$5.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$org$tensorflow$TensorflowInferSchema$$inferRowType$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$org$tensorflow$TensorflowInferSchema$$inferRowType$1$$anonfun$apply$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$org$tensorflow$TensorflowInferSchema$$inferRowType$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$org$tensorflow$TensorflowInferSchema$$inferRowType$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseDouble$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseDouble$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseFloat$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseFloat$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseInteger$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseInteger$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseLong$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$$anonfun$parseLong$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/TensorflowInferSchema.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$$anonfun$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$$anonfun$decodeTfRecord$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$$anonfun$decodeTfRecord$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowDecoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowEncoder$$anonfun$encodeTfRecord$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowEncoder$$anonfun$encodeTfRecord$1$$anonfun$apply$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowEncoder$$anonfun$encodeTfRecord$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/DefaultTfRecordRowEncoder$$anonfun$encodeTfRecord$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/TfRecordRowDecoder.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/org/tensorflow/serde/TfRecordRowDecoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/spark-tf-core-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/spark-tf-core/target/spark-tf-core-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$2$$anonfun$apply$mcV$sp$6.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$2$$anonfun$apply$mcV$sp$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$2.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$3$$anonfun$apply$mcV$sp$7.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$3$$anonfun$apply$mcV$sp$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$3.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$4.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$5$$anonfun$apply$mcV$sp$8.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$5$$anonfun$apply$mcV$sp$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$5.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1$$anonfun$apply$mcV$sp$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest.class" afterPath="$PROJECT_DIR$/spark-tf-core/target/test-classes/tensorflow/TensorFlowTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ImportTensorflow.scala" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ImportTensorflow.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowEncoder.scala" afterPath="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowEncoder.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala" afterPath="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/analysis/compile" afterPath="$PROJECT_DIR$/spark-tf-core/target/analysis/compile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/analysis/test-compile" afterPath="$PROJECT_DIR$/spark-tf-core/target/analysis/test-compile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/classes/maven.properties" afterPath="$PROJECT_DIR$/spark-tf-core/target/classes/maven.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark-tf-core/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/spark-tf-core/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" />
     </list>
     <ignored path="spark-tensorflow-connector.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -312,35 +78,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9195">
-              <caret line="613" column="0" selection-start-line="613" selection-start-column="0" selection-end-line="613" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TensorflowInferSchema.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-              <folding>
-                <element signature="e#24#55#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImportTensorflow.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ImportTensorflow.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ImportTensorflow.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            <state relative-caret-position="705">
+              <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
               <folding>
-                <element signature="e#642#684#0" expanded="true" />
+                <element signature="e#704#746#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -349,10 +93,10 @@
       <file leaf-file-name="ExportToTensorflow.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ExportToTensorflow.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <element signature="e#24#83#0" expanded="true" />
+                <element signature="e#24#83#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -361,43 +105,35 @@
       <file leaf-file-name="DefaultTfRecordRowDecoder.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="44" column="60" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TensorFlowTest.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+            <state relative-caret-position="628">
+              <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
               <folding>
-                <element signature="e#638#657#0" expanded="true" />
+                <element signature="e#648#683#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestingSparkContext.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TestingSparkContext.scala">
+      <file leaf-file-name="DefaultTfRecordRowEncoder.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowEncoder.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="405">
+              <caret line="59" column="90" selection-start-line="59" selection-start-column="90" selection-end-line="59" selection-end-column="90" />
+              <folding>
+                <element signature="e#648#703#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestingSparkContextWordSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TestingSparkContextWordSpec.scala">
+      <file leaf-file-name="TensorFlowTest.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="375">
+              <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
               <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="e#638#674#0" expanded="false" />
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#638#657#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -427,16 +163,19 @@
         <option value="$PROJECT_DIR$/src/main/scala/org/trustedanalytics/sparktk/frame/TensorflowInferSchema.scala" />
         <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow.scala" />
         <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/TensorflowInferSchema.scala" />
-        <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala" />
-        <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala" />
-        <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ImportTensorflow.scala" />
         <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ExportToTensorflow1.scala" />
         <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ExportToTensorflow.scala" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spark-tf-core/pom.xml" />
         <option value="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TestingSparkContextWordSpec.scala" />
         <option value="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TestingSparkContext.scala" />
+        <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ImportTensorflow.scala" />
+        <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala" />
+        <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/DataTypes.scala" />
+        <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/DataTypesConvertor.scala" />
         <option value="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala" />
+        <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowEncoder.scala" />
+        <option value="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala" />
       </list>
     </option>
   </component>
@@ -462,10 +201,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="28" />
-    <option name="width" value="1922" />
-    <option name="height" value="1139" />
+    <option name="width" value="1920" />
+    <option name="height" value="1138" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -493,8 +231,8 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -574,6 +312,112 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tensorflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spark-tensorflow-connector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spark-tensorflow-connector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spark-tf-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tensorflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serde" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spark-tensorflow-connector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spark-tensorflow-connector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spark-tf-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tensorflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serde" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DefaultTfRecordRowDecoder.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spark-tensorflow-connector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spark-tensorflow-connector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spark-tf-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -590,19 +434,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow" />
-      <recent name="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="tensorflow" />
-      <recent name="org.tensorflow" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/core/src" />
       <recent name="$PROJECT_DIR$/core" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/spark-tensorflow-connector" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.tensorflow" />
+      <recent name="tensorflow" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow" />
+      <recent name="$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow" />
     </key>
   </component>
   <component name="RunManager" selected="ScalaTest.TensorFlowTest.Spark-tk TensorFlow module should Test Import/Export">
@@ -1361,10 +1205,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="ScalaTest.TensorFlowTest.Spark-tk TensorFlow module should Test Import/Export" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.TensorFlowTest.Spark-tk TensorFlow module should Encode given Row as TensorFlow example" />
-        <item index="2" class="java.lang.String" itemvalue="ScalaTest.TensorFlowTest.Spark-tk TensorFlow module should Check infer schema" />
-        <item index="3" class="java.lang.String" itemvalue="ScalaTest.TensorFlowTest.Spark-tk TensorFlow module should Decode given TensorFlow Example as Row" />
-        <item index="4" class="java.lang.String" itemvalue="ScalaTest.TensorFlowTest.Spark-tk TensorFlow module should Throw null pointer exception for a vector with null values during Encode" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.TensorFlowTest.Spark-tk TensorFlow module should Check infer schema" />
+        <item index="2" class="java.lang.String" itemvalue="ScalaTest.TensorFlowTest.Spark-tk TensorFlow module should Decode given TensorFlow Example as Row" />
+        <item index="3" class="java.lang.String" itemvalue="ScalaTest.TensorFlowTest.Spark-tk TensorFlow module should Throw null pointer exception for a vector with null values during Encode" />
+        <item index="4" class="java.lang.String" itemvalue="ScalaTest.TensorFlowTest.Spark-tk TensorFlow module should Encode given Row as TensorFlow example" />
       </list>
     </recent_temporary>
   </component>
@@ -1394,75 +1238,76 @@
       <updated>1485285183784</updated>
       <workItem from="1485285188011" duration="583000" />
       <workItem from="1485285792996" duration="10227000" />
-      <workItem from="1485372702628" duration="336000" />
+      <workItem from="1485372702628" duration="12756000" />
+      <workItem from="1485387604195" duration="3223000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Encode_given_Row_as_TensorFlow_example - 2017.01.24 at 14h 57m 51s.xml">
+    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Check_infer_schema - 2017.01.25 at 16h 23m 53s.xml">
+      <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Check infer schema" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Check_infer_schema - 2017.01.25 at 16h 29m 15s.xml">
+      <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Check infer schema" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Decode_given_TensorFlow_Example_as_Row - 2017.01.25 at 16h 23m 42s.xml">
+      <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Decode given TensorFlow Example as Row" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Decode_given_TensorFlow_Example_as_Row - 2017.01.25 at 16h 29m 05s.xml">
+      <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Decode given TensorFlow Example as Row" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Encode_given_Row_as_TensorFlow_example - 2017.01.25 at 16h 28m 46s.xml">
       <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Encode given Row as TensorFlow example" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.24 at 14h 52m 55s.xml">
+    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.25 at 16h 22m 34s.xml">
       <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Test Import/Export" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.24 at 14h 53m 40s.xml">
+    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.25 at 16h 22m 53s.xml">
       <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Test Import/Export" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.24 at 14h 54m 27s.xml">
+    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.25 at 16h 29m 31s.xml">
       <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Test Import/Export" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.24 at 15h 28m 31s.xml">
+    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.25 at 16h 32m 05s.xml">
       <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Test Import/Export" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.24 at 15h 30m 02s.xml">
-      <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Test Import/Export" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.24 at 15h 34m 11s.xml">
-      <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Test Import/Export" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.25 at 11h 36m 56s.xml">
-      <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Test Import/Export" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Test_Import_Export - 2017.01.25 at 11h 37m 15s.xml">
-      <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Test Import/Export" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Throw_null_pointer_exception_for_a_vector_with_null_values_during_Encode - 2017.01.24 at 14h 36m 02s.xml">
+    <history-entry file="TensorFlowTest_Spark-tk_TensorFlow_module_should_Throw_null_pointer_exception_for_a_vector_with_null_values_during_Encode - 2017.01.25 at 16h 28m 55s.xml">
       <configuration name="TensorFlowTest.Spark-tk TensorFlow module should Throw null pointer exception for a vector with null values during Encode" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11146000" />
+    <option name="totallyTimeSpent" value="26789000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="28" width="1922" height="1139" extended-state="6" />
+    <frame x="0" y="28" width="1920" height="1138" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34412956" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976827" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5045593" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3653846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3839919" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22604166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22575599" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918947" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18630412" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5425101" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1477,7 +1322,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowEncoder.scala</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="13" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1485,6 +1340,91 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8925">
+          <caret line="595" column="39" selection-start-line="595" selection-start-column="31" selection-end-line="595" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2430">
+          <caret line="173" column="85" selection-start-line="173" selection-start-column="85" selection-end-line="173" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/DataTypesConvertor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ImportTensorflow.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="58" column="86" selection-start-line="58" selection-start-column="72" selection-end-line="58" selection-end-column="86" />
+          <folding>
+            <element signature="e#704#746#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ExportToTensorflow.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+          <folding>
+            <element signature="e#24#83#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#648#683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowEncoder.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
+          <folding>
+            <element signature="e#648#703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#638#657#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.1/spark-catalyst_2.10-1.6.0-cdh5.7.1.jar!/org/apache/spark/sql/types/ArrayType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="101" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9195">
@@ -1497,9 +1437,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="e#24#55#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1508,7 +1446,7 @@
         <state relative-caret-position="75">
           <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
           <folding>
-            <element signature="e#642#684#0" expanded="true" />
+            <element signature="e#704#746#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1518,7 +1456,7 @@
         <state relative-caret-position="195">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#24#83#0" expanded="true" />
+            <element signature="e#24#83#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1527,7 +1465,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#648#683#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1536,6 +1476,7 @@
         <state relative-caret-position="240">
           <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="e#638#657#0" expanded="true" />
           </folding>
         </state>
@@ -1545,7 +1486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1553,10 +1493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#638#674#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1582,26 +1518,8 @@
         <state relative-caret-position="525">
           <caret line="49" column="40" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="40" />
           <folding>
-            <element signature="e#24#83#0" expanded="true" />
+            <element signature="e#24#83#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="e#24#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9195">
-          <caret line="613" column="0" selection-start-line="613" selection-start-column="0" selection-end-line="613" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1609,10 +1527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#638#674#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1620,7 +1534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1632,40 +1545,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.1/spark-catalyst_2.10-1.6.0-cdh5.7.1.jar!/org/apache/spark/sql/types/ArrayType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="101" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8925">
+          <caret line="595" column="39" selection-start-line="595" selection-start-column="31" selection-end-line="595" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/DataTypesConvertor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.1/spark-catalyst_2.10-1.6.0-cdh5.7.1.jar!/org/apache/spark/sql/catalyst/expressions/BaseGenericInternalRow.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/TensorflowInferSchema.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="173" column="85" selection-start-line="173" selection-start-column="85" selection-end-line="173" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk/jre/lib/rt.jar!/java/lang/Long.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="358" column="15" selection-start-line="358" selection-start-column="15" selection-end-line="358" selection-end-column="15" />
+          <folding>
+            <element signature="e#11352#11353#0" expanded="true" />
+            <element signature="e#11390#11391#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk/jre/lib/rt.jar!/java/util/List.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/tensorflow/tensorflow-hadoop/1.0-01232017-SNAPSHOT/tensorflow-hadoop-1.0-01232017-SNAPSHOT-shaded-protobuf.jar!/org/tensorflow/example/Int64List.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="463" column="33" selection-start-line="463" selection-start-column="33" selection-end-line="463" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/tensorflow/tensorflow-hadoop/1.0-01232017-SNAPSHOT/tensorflow-hadoop-1.0-01232017-SNAPSHOT-shaded-protobuf.jar!/org/tensorflow/example/FloatList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="461" column="33" selection-start-line="461" selection-start-column="33" selection-end-line="461" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.10/1.6.2/spark-core_2.10-1.6.2-sources.jar!/org/apache/spark/executor/Executor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="240" column="30" selection-start-line="240" selection-start-column="30" selection-end-line="240" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#837#884#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ExportToTensorflow.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#24#83#0" expanded="true" />
+            <element signature="e#24#83#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scalatest/scalatest_2.10/2.1.6/scalatest_2.10-2.1.6-sources.jar!/org/scalatest/OutcomeOf.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.10/1.6.2/spark-core_2.10-1.6.2-sources.jar!/org/apache/spark/scheduler/Task.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="93" column="10" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+          <folding>
+            <element signature="e#648#683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowEncoder.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="59" column="90" selection-start-line="59" selection-start-column="90" selection-end-line="59" selection-end-column="90" />
+          <folding>
+            <element signature="e#648#703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#638#657#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/ImportTensorflow.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        <state relative-caret-position="705">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
           <folding>
-            <element signature="e#642#684#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/main/scala/org/tensorflow/serde/DefaultTfRecordRowDecoder.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="44" column="60" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spark-tf-core/src/test/scala/tensorflow/TensorFlowTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding>
-            <element signature="e#638#657#0" expanded="true" />
+            <element signature="e#704#746#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -15,10 +15,11 @@
  */
 package org.tensorflow.serde
 
+import org.apache.spark.sql.types._
 import org.apache.spark.sql.Row
 import org.tensorflow.example._
+
 import scala.collection.JavaConverters._
-import org.trustedanalytics.sparktk.frame.{ DataTypes, FrameSchema }
 
 trait TfRecordRowDecoder {
   /**
@@ -30,52 +31,49 @@ trait TfRecordRowDecoder {
    * @param schema Decode Example using specified schema
    * @return a frame row
    */
-  def decodeTfRecord(example: Example, schema: FrameSchema): Row
+  def decodeTfRecord(example: Example, schema: StructType): Row
 }
 
 object DefaultTfRecordRowDecoder extends TfRecordRowDecoder {
 
-  def decodeTfRecord(example: Example, schema: FrameSchema): Row = {
-    val row = Array.fill[Any](schema.columns.length)(null)
+  def decodeTfRecord(example: Example, schema: StructType): Row = {
+    val row = Array.fill[Any](schema.length)(null)
     example.getFeatures.getFeatureMap.asScala.foreach {
       case (featureName, feature) =>
-        val colDataType = schema.columnDataType(featureName)
-        row(schema.columnIndex(featureName)) = colDataType match {
-          case dtype if dtype.equals(DataTypes.int32) | dtype.equals(DataTypes.int64) => {
+        val index = schema.fieldIndex(featureName)
+        val colDataType = schema.fields(index).dataType
+        row(index) = colDataType match {
+          case dtype if dtype.equals(IntegerType) | dtype.equals(LongType) => {
             val dataList = feature.getInt64List.getValueList
-            if (dataList.size() == 1)
-              colDataType.parse(dataList.get(0)).get
+            if (dataList.size() == 1) {
+              val p = dataList.get(0)
+              p.intValue()
+            }
             else
               throw new RuntimeException("Mismatch in schema type, expected int32 or int64")
           }
-          case dtype if dtype.equals(DataTypes.float32) | dtype.equals(DataTypes.float64) => {
+          case dtype if dtype.equals(FloatType) | dtype.equals(DoubleType) => {
             val dataList = feature.getFloatList.getValueList
-            if (dataList.size() == 1)
-              colDataType.parse(dataList.get(0)).get
+            if (dataList.size() == 1) {
+              val p = dataList.get(0)
+              p.floatValue()
+            }
             else
               throw new RuntimeException("Mismatch in schema type, expected float32 or float64")
           }
-          case vtype: DataTypes.vector => {
+          case vtype: ArrayType => {
             feature.getKindCase.getNumber match {
               case Feature.INT64_LIST_FIELD_NUMBER => {
-                val dataList = feature.getInt64List.getValueList
-                val actualSize = dataList.size()
-                if (vtype.length == actualSize)
-                  vtype.parse(dataList.asScala.toList).get
-                else
-                  throw new RuntimeException("Mismatch in vector length: expected length = $(vtype.length) but found length = $actualSize")
+                val datalist = feature.getInt64List.getValueList.asScala.toList
+                datalist
               }
               case Feature.FLOAT_LIST_FIELD_NUMBER => {
-                val dataList = feature.getFloatList.getValueList
-                val actualSize = dataList.size()
-                if (vtype.length == actualSize)
-                  vtype.parse(dataList.asScala.toList).get
-                else
-                  throw new RuntimeException("Mismatch in vector length: expected length = $(vtype.length) but found length = $actualSize")
+                val datalist = feature.getFloatList.getValueList.asScala.toList
+                datalist
               }
             }
           }
-          case dtype if dtype.equals(DataTypes.string) => feature.getBytesList.toByteString.toStringUtf8.trim
+          case dtype if dtype.equals(StringType) => feature.getBytesList.toByteString.toStringUtf8.trim
           case _ => throw new RuntimeException("Unsupported dataype...!!")
         }
     }
