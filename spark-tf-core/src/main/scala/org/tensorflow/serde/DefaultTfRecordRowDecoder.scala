@@ -18,7 +18,6 @@ package org.tensorflow.serde
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.Row
 import org.tensorflow.example._
-
 import scala.collection.JavaConverters._
 
 trait TfRecordRowDecoder {

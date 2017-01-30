@@ -114,14 +114,19 @@
         <artifactId>spark-core_2.10</artifactId>
     </dependency>
         <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.10</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.tensorflow</groupId>
             <artifactId>tensorflow-hadoop</artifactId>
             <classifier>shaded-protobuf</classifier>
         </dependency>
-        <dependency>
-            <groupId>org.trustedanalytics</groupId>
-            <artifactId>sparktk-core</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.trustedanalytics</groupId>-->
+            <!--<artifactId>sparktk-core</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.joda</groupId>
             <artifactId>joda-convert</artifactId>

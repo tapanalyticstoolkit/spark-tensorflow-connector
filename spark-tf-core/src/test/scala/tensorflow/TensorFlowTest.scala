@@ -22,7 +22,7 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.catalyst.expressions.{ GenericRow, GenericRowWithSchema }
 import org.apache.spark.sql.types._
-import org.scalatest.Matchers
+import org.scalatest.{ BeforeAndAfterAll, Matchers }
 import org.tensorflow.{ ExportToTensorflow, ImportTensorflow, TensorflowInferSchema }
 import org.tensorflow.example._
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
@@ -30,13 +30,25 @@ import org.tensorflow.serde.{ DefaultTfRecordRowDecoder, DefaultTfRecordRowEncod
 
 import scala.collection.JavaConverters._
 
-class TensorFlowTest extends TestingSparkContextWordSpec with Matchers {
+class TensorFlowTest extends TestingSparkContextWordSpec with Matchers with BeforeAndAfterAll {
+
+  val TF_SANDBOX_DIR = "tf-sandbox"
+  val file = new File(TF_SANDBOX_DIR)
+
+  override def beforeAll() = {
+    super.beforeAll()
+    file.mkdirs()
+  }
+
+  override def afterAll() = {
+    file.delete()
+    super.afterAll()
+  }
 
   "Spark-tk TensorFlow module" should {
     "Test Import/Export" in {
 
-      val path = "/home/kvadla/testtf/output25.tfr"
-      FileUtils.deleteQuietly(new File(path))
+      val path = s"$TF_SANDBOX_DIR/output25.tfr"
       val testRows: Array[Row] = Array(
         new GenericRow(Array[Any](11, 1, 23L, 10.0F, 14.0, List(1.0, 2.0), "r1")),
         new GenericRow(Array[Any](21, 2, 24L, 12.0F, 15.0, List(2.0, 2.0), "r2")))

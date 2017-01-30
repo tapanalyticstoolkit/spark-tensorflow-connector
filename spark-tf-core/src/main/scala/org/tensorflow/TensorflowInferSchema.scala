@@ -2,13 +2,7 @@ package org.tensorflow
 
 import org.apache.spark.rdd.RDD
 import org.tensorflow.example._
-//import org.trustedanalytics.sparktk.frame.DataTypes.{ DataType, float32, float64, int32, int64 }
-//import org.trustedanalytics.sparktk.frame.{ Column, FrameSchema }
-//import org.trustedanalytics.sparktk.frame.DataTypes
-
-import org.apache.spark.sql._
 import org.apache.spark.sql.types._
-
 import scala.collection.mutable.Map
 import scala.collection.JavaConverters._
 import scala.util.control.Exception._

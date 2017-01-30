@@ -15,7 +15,6 @@
  */
 package org.tensorflow
 
-//import org.apache.calcite.avatica.ColumnMetaData.StructType
 import org.apache.commons.lang.StringUtils
 import org.apache.hadoop.io.{ BytesWritable, NullWritable }
 import org.apache.spark.SparkContext
@@ -24,7 +23,6 @@ import org.tensorflow.example.Example
 import org.tensorflow.hadoop.io.TFRecordFileInputFormat
 import org.tensorflow.serde.DefaultTfRecordRowDecoder
 import org.apache.spark.sql.types._
-//import org.trustedanalytics.sparktk.frame.{ Frame, FrameSchema }
 
 object ImportTensorflow {
   /**
