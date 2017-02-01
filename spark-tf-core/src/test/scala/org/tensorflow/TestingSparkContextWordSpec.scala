@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package tensorflow
+package org.tensorflow
 
 import org.apache.spark.SparkContext
 import org.scalatest.{ BeforeAndAfterAll, WordSpec }

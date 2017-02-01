@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package tensorflow
+package org.tensorflow
 
 import java.util.Date
 import org.apache.log4j.{ Level, Logger }

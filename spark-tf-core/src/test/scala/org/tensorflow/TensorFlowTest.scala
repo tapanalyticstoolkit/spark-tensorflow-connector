@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package tensorflow
+package org.tensorflow
 
 import java.io.File
 
@@ -45,7 +45,17 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers with Befo
     super.afterAll()
   }
 
-  "Spark-tk TensorFlow module" should {
+  "Spark TensorFlow module" should {
+
+    "interface test" in {
+      val sqlContext = new org.apache.spark.sql.SQLContext(sparkContext)
+      //      val results = sqlContext(carsFile, parserLib = parserLib)
+      //        .select("year")
+      //        .collect()
+      //
+      //      assert(results.size === numCars)
+    }
+
     "Test Import/Export" in {
 
       val path = s"$TF_SANDBOX_DIR/output25.tfr"
