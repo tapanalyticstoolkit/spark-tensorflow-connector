@@ -60,3 +60,5 @@ graphframes
 *.coverage*
 scoring-pipelines
 tf-sandbox
+spark-tensorflow-connector.iml
+sspark-tf-core/park-tf-core.iml
