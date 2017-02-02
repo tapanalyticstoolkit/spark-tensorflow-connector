@@ -1,16 +1,16 @@
 package org.tensorflow
 
 import org.apache.spark.sql.types.StructType
-import org.apache.spark.sql.{ DataFrame, SQLContext }
+import org.apache.spark.sql.{ DataFrame, SQLContext, SparkSession }
 
 package object tf {
 
   /**
    * Adds a method, `csvFile`, to SQLContext that allows reading CSV data.
    */
-  implicit class tfContext(sqlContext: SQLContext) extends Serializable {
+  implicit class tfSession(session: SparkSession) extends Serializable {
     def tfFile(filePath: String, schema: Option[StructType] = None): DataFrame = {
-      ImportTensorflow.importTensorflow(sqlContext.sparkContext, filePath, schema)
+      ImportTensorflow.importTensorflow(session, filePath, schema)
     }
 
   }

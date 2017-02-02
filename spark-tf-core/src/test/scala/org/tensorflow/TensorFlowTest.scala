@@ -16,21 +16,18 @@
 package org.tensorflow
 
 import java.io.File
-
-import org.apache.commons.io.FileUtils
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.Row
+import org.apache.spark.sql.{ DataFrame, Row }
 import org.apache.spark.sql.catalyst.expressions.{ GenericRow, GenericRowWithSchema }
 import org.apache.spark.sql.types._
 import org.scalatest.{ BeforeAndAfterAll, Matchers }
-import org.tensorflow.{ ExportToTensorflow, ImportTensorflow, TensorflowInferSchema }
 import org.tensorflow.example._
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
 import org.tensorflow.serde.{ DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder }
 
 import scala.collection.JavaConverters._
 
-class TensorFlowTest extends TestingSparkContextWordSpec with Matchers with BeforeAndAfterAll {
+class TensorFlowTest extends TestingSparkSessionWordSpec with Matchers with BeforeAndAfterAll {
 
   val TF_SANDBOX_DIR = "tf-sandbox"
   val file = new File(TF_SANDBOX_DIR)
@@ -47,15 +44,6 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers with Befo
 
   "Spark TensorFlow module" should {
 
-    "interface test" in {
-      val sqlContext = new org.apache.spark.sql.SQLContext(sparkContext)
-      //      val results = sqlContext(carsFile, parserLib = parserLib)
-      //        .select("year")
-      //        .collect()
-      //
-      //      assert(results.size === numCars)
-    }
-
     "Test Import/Export" in {
 
       val path = s"$TF_SANDBOX_DIR/output25.tfr"
@@ -63,13 +51,13 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers with Befo
         new GenericRow(Array[Any](11, 1, 23L, 10.0F, 14.0, List(1.0, 2.0), "r1")),
         new GenericRow(Array[Any](21, 2, 24L, 12.0F, 15.0, List(2.0, 2.0), "r2")))
       val schema = StructType(List(StructField("id", IntegerType), StructField("IntegerTypelabel", IntegerType), StructField("LongTypelabel", LongType), StructField("FloatTypelabel", FloatType), StructField("DoubleTypelabel", DoubleType), StructField("vectorlabel", ArrayType(DoubleType, true)), StructField("name", StringType)))
-      val rdd = sparkContext.parallelize(testRows)
+      val rdd = sparkSession.sparkContext.parallelize(testRows)
 
-      val sqlContext = new org.apache.spark.sql.SQLContext(sparkContext)
-      val df = sqlContext.createDataFrame(rdd, schema)
+      //val sqlContext = new org.apache.spark.sql.SQLContext(sparkContext)
+      val df: DataFrame = sparkSession.createDataFrame(rdd, schema)
       //val frame = new Frame(rdd, schema)
       ExportToTensorflow.exportToTensorflow(df, path)
-      val importedDf = ImportTensorflow.importTensorflow(sparkContext, path)
+      val importedDf = ImportTensorflow.importTensorflow(sparkSession, path)
       val actualDf = importedDf.select("id", "IntegerTypelabel", "LongTypelabel", "FloatTypelabel", "DoubleTypelabel", "vectorlabel", "name")
 
       val expectedRows = df.collect()
@@ -219,7 +207,7 @@ class TensorFlowTest extends TestingSparkContextWordSpec with Matchers with Befo
         .setFeatures(features2)
         .build()
 
-      val exampleRDD: RDD[Example] = sparkContext.parallelize(List(example1, example2))
+      val exampleRDD: RDD[Example] = sparkSession.sparkContext.parallelize(List(example1, example2))
 
       val actualSchema = TensorflowInferSchema(exampleRDD)
 

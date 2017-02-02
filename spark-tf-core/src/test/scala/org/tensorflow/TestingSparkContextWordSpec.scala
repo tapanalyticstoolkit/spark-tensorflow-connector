@@ -15,23 +15,23 @@
  */
 package org.tensorflow
 
-import org.apache.spark.SparkContext
+import org.apache.spark.sql.SparkSession
 import org.scalatest.{ BeforeAndAfterAll, WordSpec }
 
-trait TestingSparkContextWordSpec extends WordSpec with BeforeAndAfterAll {
+trait TestingSparkSessionWordSpec extends WordSpec with BeforeAndAfterAll {
 
-  var sparkContext: SparkContext = null
+  var sparkSession: SparkSession = null
 
   override def beforeAll() = {
-    sparkContext = TestingSparkContext.sparkContext
+    sparkSession = TestingSparkSession.sparkSession
   }
 
   /**
    * Clean up after the test is done
    */
   override def afterAll() = {
-    TestingSparkContext.cleanUp()
-    sparkContext = null
+    TestingSparkSession.cleanUp()
+    sparkSession = null
   }
 
   /** assertion that two doubles are almost equal */

@@ -18,7 +18,7 @@ package org.tensorflow
 import org.apache.commons.lang.StringUtils
 import org.apache.hadoop.io.{ BytesWritable, NullWritable }
 import org.apache.spark.SparkContext
-import org.apache.spark.sql.DataFrame
+import org.apache.spark.sql.{ DataFrame, SparkSession }
 import org.tensorflow.example.Example
 import org.tensorflow.hadoop.io.TFRecordFileInputFormat
 import org.tensorflow.serde.DefaultTfRecordRowDecoder
@@ -38,15 +38,15 @@ object ImportTensorflow {
    * FloatList => FloatType or DoubleType
    * Any other DataType (Ex: String) => BytesList
    *
-   * @param sc sparkcontext
+   * @param sparkSession sparkSession
    * @param sourceTfRecordsPath Full path to TensorFlow records on HDFS/Local filesystem
    * @param schema Optional frame schema to use during import. If not defined, then the schema is inferred from the TensorFlow records
    * @return frame with data from TensorFlow records
    */
-  def importTensorflow(sc: SparkContext, sourceTfRecordsPath: String, schema: Option[StructType] = None): DataFrame = {
+  def importTensorflow(sparkSession: SparkSession, sourceTfRecordsPath: String, schema: Option[StructType] = None): DataFrame = {
     require(StringUtils.isNotEmpty(sourceTfRecordsPath), "path should not be null or empty.")
 
-    val rdd = sc.newAPIHadoopFile(sourceTfRecordsPath, classOf[TFRecordFileInputFormat], classOf[BytesWritable], classOf[NullWritable])
+    val rdd = sparkSession.sparkContext.newAPIHadoopFile(sourceTfRecordsPath, classOf[TFRecordFileInputFormat], classOf[BytesWritable], classOf[NullWritable])
 
     val exampleRdd = rdd.map {
       case (bytesWritable, nullWritable) => Example.parseFrom(bytesWritable.getBytes)
@@ -56,9 +56,7 @@ object ImportTensorflow {
 
     val resultRdd = exampleRdd.map(example => DefaultTfRecordRowDecoder.decodeTfRecord(example, finalSchema))
 
-    val sqlContext = new org.apache.spark.sql.SQLContext(sc)
-    sqlContext.createDataFrame(resultRdd, finalSchema)
-    //new Frame(resultRdd, finalSchema)
+    sparkSession.createDataFrame(resultRdd, finalSchema)
   }
 
 }
