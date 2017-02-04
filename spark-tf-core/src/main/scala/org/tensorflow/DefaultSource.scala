@@ -3,7 +3,7 @@ package org.tensorflow
 import org.apache.spark.sql.sources._
 
 /**
- * Provides access to CSV data from pure SQL statements (i.e. for users of the
+ * Provides access to tfr data from pure SQL statements (i.e. for users of the
  * JDBC server).
  */
 class DefaultSource
