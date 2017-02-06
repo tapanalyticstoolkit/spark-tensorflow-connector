@@ -19,12 +19,13 @@ package org.tensorflow.tf
 
 import java.io.File
 
+import org.apache.commons.io.FileUtils
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.{ DataFrame, Row }
 import org.apache.spark.sql.catalyst.expressions.{ GenericRow, GenericRowWithSchema }
 import org.apache.spark.sql.types._
 import org.scalatest.{ BeforeAndAfterAll, Matchers }
-import org.tensorflow.TestingSparkSessionWordSpec
+import org.tensorflow.{ TensorflowInferSchema, TestingSparkSessionWordSpec }
 import org.tensorflow.example._
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
 import org.tensorflow.serde.{ DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder }
@@ -42,7 +43,7 @@ class TfSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAf
   }
 
   override def afterAll() = {
-    file.delete()
+    FileUtils.deleteQuietly(file)
     super.afterAll()
   }
 
@@ -57,11 +58,10 @@ class TfSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAf
       val schema = StructType(List(StructField("id", IntegerType), StructField("IntegerTypelabel", IntegerType), StructField("LongTypelabel", LongType), StructField("FloatTypelabel", FloatType), StructField("DoubleTypelabel", DoubleType), StructField("vectorlabel", ArrayType(DoubleType, true)), StructField("name", StringType)))
       val rdd = sparkSession.sparkContext.parallelize(testRows)
 
-      //val sqlContext = new org.apache.spark.sql.SQLContext(sparkSession)
-      val df: DataFrame = sparkSession.createDataFrame(rdd, schema)
+      val df : DataFrame = sparkSession.createDataFrame(rdd, schema)
       df.saveAsTfRecords(path)
 
-      val importedDf: DataFrame = sparkSession.tfFile(path)
+      val importedDf :DataFrame = sparkSession.tfFile(path)
       val actualDf = importedDf.select("id", "IntegerTypelabel", "LongTypelabel", "FloatTypelabel", "DoubleTypelabel", "vectorlabel", "name")
 
       val expectedRows = df.collect()
