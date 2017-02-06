@@ -21,14 +21,14 @@ import java.io.File
 
 import org.apache.commons.io.FileUtils
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.{ DataFrame, Row }
-import org.apache.spark.sql.catalyst.expressions.{ GenericRow, GenericRowWithSchema }
+import org.apache.spark.sql.{DataFrame, Row}
+import org.apache.spark.sql.catalyst.expressions.{GenericRow, GenericRowWithSchema}
 import org.apache.spark.sql.types._
 import org.scalatest.{ BeforeAndAfterAll, Matchers }
 import org.tensorflow.{ TensorflowInferSchema, TestingSparkSessionWordSpec }
 import org.tensorflow.example._
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
-import org.tensorflow.serde.{ DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder }
+import org.tensorflow.serde.{DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder}
 
 import scala.collection.JavaConverters._
 

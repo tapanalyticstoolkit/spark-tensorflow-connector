@@ -17,7 +17,6 @@ package org.tensorflow
 
 import org.apache.commons.lang.StringUtils
 import org.apache.hadoop.io.{ BytesWritable, NullWritable }
-import org.apache.spark.SparkContext
 import org.apache.spark.sql.{ DataFrame, SparkSession }
 import org.tensorflow.example.Example
 import org.tensorflow.hadoop.io.TFRecordFileInputFormat
