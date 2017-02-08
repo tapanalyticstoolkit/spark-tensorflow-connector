@@ -1,6 +1,6 @@
 package org.tensorflow
 
-import org.apache.hadoop.io.{NullWritable, BytesWritable}
+import org.apache.hadoop.io.{ NullWritable, BytesWritable }
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql._
 import org.apache.spark.sql.sources._
@@ -22,10 +22,10 @@ class DefaultSource
 
   // write path
   override def createRelation(
-                      sqlContext: SQLContext,
-                      mode: SaveMode,
-                      parameters: Map[String, String],
-                      data: DataFrame): BaseRelation = {
+    sqlContext: SQLContext,
+    mode: SaveMode,
+    parameters: Map[String, String],
+    data: DataFrame): BaseRelation = {
 
     val path = parameters("path")
     ExportToTensorflow.exportToTensorflow(data, path)
