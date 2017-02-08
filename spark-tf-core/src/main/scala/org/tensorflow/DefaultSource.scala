@@ -21,7 +21,7 @@ class DefaultSource
   override def shortName(): String = "tf"
 
   // write path
-  def createRelation(
+  override def createRelation(
                       sqlContext: SQLContext,
                       mode: SaveMode,
                       parameters: Map[String, String],
@@ -33,10 +33,9 @@ class DefaultSource
   }
 
   // read path
-  def createRelation(sqlContext: SQLContext, parameters: Map[String, String]): TfRelation = {
+  override def createRelation(sqlContext: SQLContext, parameters: Map[String, String]): TfRelation = {
     TfRelation(parameters)(sqlContext.sparkSession)
   }
-
 
 }
 
