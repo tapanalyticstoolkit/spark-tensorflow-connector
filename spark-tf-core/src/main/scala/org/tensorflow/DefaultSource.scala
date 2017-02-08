@@ -3,7 +3,7 @@ package org.tensorflow
 import org.apache.hadoop.fs.FileStatus
 import org.apache.hadoop.mapreduce.Job
 import org.apache.spark.sql._
-import org.apache.spark.sql.execution.datasources.{OutputWriterFactory, TextBasedFileFormat, HadoopFsRelation}
+import org.apache.spark.sql.execution.datasources.{ OutputWriterFactory, TextBasedFileFormat, HadoopFsRelation }
 import org.apache.spark.sql.sources._
 import org.apache.spark.sql.types.StructType
 
@@ -19,22 +19,30 @@ class DefaultSource
    */
   override def shortName(): String = "tf"
 
-  def createRelation(
-                      sqlContext: SQLContext,
-                      mode: SaveMode,
-                      parameters: Map[String, String],
-                      data: DataFrame): BaseRelation = {
+  override def createRelation(
+    sqlContext: SQLContext,
+    mode: SaveMode,
+    parameters: Map[String, String],
+    data: DataFrame): BaseRelation = {
 
     val path = parameters("path")
     ExportToTensorflow.exportToTensorflow(data, path)
 
-    new BaseRelation {
-      override def sqlContext: SQLContext = sqlContext
-      override def schema: StructType = data.schema
-    }
-
+    TfRelation(parameters)(sqlContext.sparkSession)
   }
 
+}
 
+case class TfRelation(val options: Map[String, String])(@transient val session: SparkSession)
+    extends BaseRelation {
 
+  override def sqlContext: SQLContext = session.sqlContext
+
+  def pathOption: Option[String] = options.get("path")
+
+  // We can't get the relation directly for write path, here we put the path option in schema
+  // metadata, so that we can test it later.
+  override def schema: StructType = {
+    new StructType
+  }
 }
