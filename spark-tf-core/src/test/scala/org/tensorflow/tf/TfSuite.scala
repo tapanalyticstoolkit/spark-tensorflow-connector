@@ -58,10 +58,10 @@ class TfSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAf
       val schema = StructType(List(StructField("id", IntegerType), StructField("IntegerTypelabel", IntegerType), StructField("LongTypelabel", LongType), StructField("FloatTypelabel", FloatType), StructField("DoubleTypelabel", DoubleType), StructField("vectorlabel", ArrayType(DoubleType, true)), StructField("name", StringType)))
       val rdd = sparkSession.sparkContext.parallelize(testRows)
 
-      val df : DataFrame = sparkSession.createDataFrame(rdd, schema)
-      df.saveAsTfRecords(path)
+      val df: DataFrame = sparkSession.createDataFrame(rdd, schema)
+      df.write.format("tf").save(path)
 
-      val importedDf :DataFrame = sparkSession.tfFile(path)
+      val importedDf: DataFrame = sparkSession.read.format("tf").load(path)
       val actualDf = importedDf.select("id", "IntegerTypelabel", "LongTypelabel", "FloatTypelabel", "DoubleTypelabel", "vectorlabel", "name")
 
       val expectedRows = df.collect()
