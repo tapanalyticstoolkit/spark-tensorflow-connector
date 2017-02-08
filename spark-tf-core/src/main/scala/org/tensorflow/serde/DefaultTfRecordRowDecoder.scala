@@ -22,13 +22,13 @@ import scala.collection.JavaConverters._
 
 trait TfRecordRowDecoder {
   /**
-   * Decodes each TensorFlow "Example" as Frame "Row"
+   * Decodes each TensorFlow "Example" as DataFrame "Row"
    *
    * Maps each feature in Example to element in Row with DataType based on custom schema or default mapping of Int64List, FloatList, BytesList to column data type
    *
    * @param example TensorFlow Example to decode
    * @param schema Decode Example using specified schema
-   * @return a frame row
+   * @return a DataFrame row
    */
   def decodeTfRecord(example: Example, schema: StructType): Row
 }
@@ -63,12 +63,12 @@ object DefaultTfRecordRowDecoder extends TfRecordRowDecoder {
           case vtype: ArrayType => {
             feature.getKindCase.getNumber match {
               case Feature.INT64_LIST_FIELD_NUMBER => {
-                val datalist = feature.getInt64List.getValueList.asScala.toList
-                datalist
+                val dataList = feature.getInt64List.getValueList.asScala.toList
+                dataList
               }
               case Feature.FLOAT_LIST_FIELD_NUMBER => {
-                val datalist = feature.getFloatList.getValueList.asScala.toList
-                datalist
+                val dataList = feature.getFloatList.getValueList.asScala.toList
+                dataList
               }
             }
           }
