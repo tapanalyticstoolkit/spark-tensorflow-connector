@@ -70,17 +70,7 @@ object TestingSparkSession {
   private def createLocalSparkSession(
     serializer: String = "org.apache.spark.serializer.JavaSerializer",
     registrator: String = "org.apache.spark.serializer.KryoSerializer"): SparkSession = {
-    // LogUtils.silenceSpark()
     System.setProperty("spark.driver.allowMultipleContexts", "true")
-    //    val conf = new SparkConf()
-    //      .setMaster("local")
-    //      .setAppName(this.getClass.getSimpleName + " " + new Date())
-    //    conf.set("spark.serializer", serializer)
-    //    //conf.set("spark.kryo.registrator", registrator)
-    //    conf.set("spark.sql.shuffle.partitions", "2")
-    //
-    //    turnOffLogging() // todo: add to config if needed for debug
-
     turnOffLogging() // todo: add to config if needed for debug
 
     SparkSession

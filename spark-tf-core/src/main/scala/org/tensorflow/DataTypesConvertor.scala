@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory
 import scala.language.implicitConversions
 
 /**
- * Datatypes supported
+ * DataTypes supported
  */
 object DataTypesConvertor {
 
@@ -39,7 +39,6 @@ object DataTypesConvertor {
       case d: Double => d
       case bd: BigDecimal => bd.toDouble
       case s: String => s.trim().toDouble
-      //      case v: vector.ScalaType => vector.asDouble(v)
       case _ => throw new IllegalArgumentException(s"The following value is not a numeric data type: $value")
     }
   }
@@ -53,7 +52,6 @@ object DataTypesConvertor {
       case d: Double => BigDecimal(d)
       case bd: BigDecimal => bd
       case s: String => BigDecimal(s)
-      //      case v: vector.ScalaType => BigDecimal(vector.asDouble(v))
       case _ => throw new IllegalArgumentException(s"The following value is not of numeric data type: $value")
     }
   }
@@ -67,7 +65,6 @@ object DataTypesConvertor {
       case d: Double => d.toLong
       case bd: BigDecimal => bd.toLong
       case s: String => s.trim().toLong
-      //      case v: vector.ScalaType => vector.asDouble(v).toLong
       case _ => throw new RuntimeException(s"${value.getClass.getName} toLong is not implemented")
     }
   }
@@ -81,7 +78,6 @@ object DataTypesConvertor {
       case d: Double => d.toInt
       case bd: BigDecimal => bd.toInt
       case s: String => s.trim().toInt
-      //      case v: vector.ScalaType => vector.asDouble(v).toInt
       case _ => throw new RuntimeException(s"${value.getClass.getName} toInt is not implemented")
     }
   }
@@ -95,7 +91,6 @@ object DataTypesConvertor {
       case d: Double => d.toFloat
       case bd: BigDecimal => bd.toFloat
       case s: String => s.trim().toFloat
-      //      case v: vector.ScalaType => vector.asDouble(v).toFloat
       case _ => throw new RuntimeException(s"${value.getClass.getName} toFloat is not implemented")
     }
   }
@@ -104,7 +99,6 @@ object DataTypesConvertor {
     value match {
       case null => null
       case s: String => s
-      //      case v: vector.ScalaType => vector.asString(v)
       case value =>
         try {
           value.toString

@@ -25,7 +25,7 @@ import org.apache.spark.sql.types._
 
 object ImportTensorflow {
   /**
-   * Creates a frame using TensorFlow Records path with specified schema
+   * Creates a DataFrame using TensorFlow Records path with specified schema
    *
    * TensorFlow records are the standard data format for TensorFlow. The recommended format for TensorFlow is a TFRecords file
    * containing tf.train.Example protocol buffers. The tf.train.Example protocol buffers encodes (which contain Features as a field).
@@ -39,8 +39,8 @@ object ImportTensorflow {
    *
    * @param sparkSession sparkSession
    * @param sourceTfRecordsPath Full path to TensorFlow records on HDFS/Local filesystem
-   * @param schema Optional frame schema to use during import. If not defined, then the schema is inferred from the TensorFlow records
-   * @return frame with data from TensorFlow records
+   * @param schema Optional DataFrame schema to use during import. If not defined, then the schema is inferred from the TensorFlow records
+   * @return DataFrame with data from TensorFlow records
    */
   def importTensorflow(sparkSession: SparkSession, sourceTfRecordsPath: String, schema: Option[StructType] = None): DataFrame = {
     require(StringUtils.isNotEmpty(sourceTfRecordsPath), "path should not be null or empty.")

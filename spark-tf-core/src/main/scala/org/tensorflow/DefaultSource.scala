@@ -10,7 +10,7 @@ import org.tensorflow.hadoop.io.TFRecordFileInputFormat
 import org.tensorflow.serde.DefaultTfRecordRowDecoder
 
 /**
- * Provides access to tensorflow record source
+ * Provides access to TensorFlow record source
  */
 class DefaultSource
     extends DataSourceRegister with CreatableRelationProvider with RelationProvider {
@@ -20,7 +20,7 @@ class DefaultSource
    */
   override def shortName(): String = "tf"
 
-  // write path
+  // Writes DataFrame as TensorFlow Records
   override def createRelation(
     sqlContext: SQLContext,
     mode: SaveMode,
@@ -32,7 +32,7 @@ class DefaultSource
     TfRelation(parameters)(sqlContext.sparkSession)
   }
 
-  // read path
+  // Reads TensorFlow Records into DataFrame
   override def createRelation(sqlContext: SQLContext, parameters: Map[String, String]): TfRelation = {
     TfRelation(parameters)(sqlContext.sparkSession)
   }

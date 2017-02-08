@@ -27,7 +27,7 @@ trait TfRecordRowEncoder {
    *
    * Maps each column in Row to one of Int64List, FloatList, BytesList based on the column data type
    *
-   * @param row a frame row
+   * @param row a DataFrame row
    * @return TensorFlow Example
    */
   def encodeTfRecord(row: Row): Example

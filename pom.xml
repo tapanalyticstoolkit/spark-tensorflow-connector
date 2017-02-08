@@ -13,7 +13,7 @@
     </modules>
 
     <repositories>
-    <repository>
+        <repository>
         <id>central1</id>
         <url>http://central1.maven.org/maven2</url>
         <releases>
@@ -165,6 +165,7 @@
                 </plugins>
             </build>
         </profile>
+
         <profile>
             <id>test</id>
             <activation>
@@ -328,6 +329,7 @@
             </build>
         </profile>
     </profiles>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -336,11 +338,13 @@
                     <artifactId>exec-maven-plugin</artifactId>
                     <version>1.3.2</version>
                 </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.17</version>
                 </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -370,94 +374,12 @@
                     </executions>
                 </plugin>
 
-                <!-- Update and correct open source license block comments -->
-                <!--<plugin>-->
-                    <!--<groupId>com.mycila</groupId>-->
-                    <!--<artifactId>license-maven-plugin</artifactId>-->
-                    <!--<configuration>-->
-                        <!--<header>license-header.txt</header>-->
-                        <!--<headerDefinitions>-->
-                            <!--<headerDefinition>python.xml</headerDefinition>-->
-                        <!--</headerDefinitions>-->
-                        <!--<mapping>-->
-                            <!--<py>PYTHON_STYLE</py>-->
-                        <!--</mapping>-->
-                        <!--<excludes combine.children="append">-->
-                            <!--<exclude>zinc-0.3.7/</exclude>-->
-                            <!--<exclude>src/main/scala/org/apache/spark/mllib/optimization/org/trustedanalytics/sparktk/CostFunction.scala</exclude>-->
-                            <!--<exclude>src/main/scala/org/apache/spark/mllib/classification/org/trustedanalytics/sparktk/LogisticRegressionModelWithFrequency.scala</exclude>-->
-                            <!--<exclude>src/main/scala/org/apache/spark/mllib/optimization/org/trustedanalytics/sparktk/GradientDescentWithFrequency.scala</exclude>-->
-                            <!--<exclude>src/main/scala/org/apache/spark/mllib/optimization/org/trustedanalytics/sparktk/GradientWithFrequency.scala</exclude>-->
-                            <!--<exclude>src/main/scala/org/apache/spark/mllib/optimization/org/trustedanalytics/sparktk/LBFGSWithFrequency.scala</exclude>-->
-                            <!--<exclude>src/main/scala/org/apache/spark/mllib/optimization/org/trustedanalytics/sparktk/OptimizerWithFrequency.scala</exclude>-->
-                            <!--<exclude>src/main/scala/org/apache/spark/mllib/regression/org/trustedanalytics/sparktk/GeneralizedLinearAlgorithmWithFrequency.scala</exclude>-->
-                            <!--<exclude>src/main/scala/org/apache/spark/mllib/utils/org/trustedanalytics/sparktk/DataValidatorsWithFrequency.scala</exclude>-->
-                            <!--<exclude>datasets/dicom_xml/</exclude>-->
-                            <!--<exclude>regression-tests/datasets/</exclude>-->
-                            <!--<exclude>python.xml</exclude>-->
-                            <!--<exclude>integration-tests/tests/test_docs_generated.py</exclude>-->
-                            <!--<exclude>integration-tests/tests/sandbox</exclude>-->
-                            <!--<exclude>findbugs-exclude.xml</exclude>-->
-                            <!--<exclude>regression-tests/dist/</exclude>-->
-                            <!--<exclude>scalastyle-config.xml</exclude>-->
-                            <!--<exclude>checkstyle.xml</exclude>-->
-                            <!--<exclude>**/*.html</exclude>-->
-                            <!--<exclude>**/*.js</exclude>-->
-                            <!--<exclude>**/*.css</exclude>-->
-                            <!--<exclude>**/nosetests.xml</exclude>-->
-                            <!--<exclude>**/pom.xml</exclude>-->
-                            <!--<exclude>doc/**/*.*</exclude>-->
-                            <!--<exclude>conf/**/*.*</exclude>-->
-                            <!--<exclude>**/*.txt</exclude>-->
-                            <!--<exclude>**/*.tfr</exclude>-->
-                            <!--<exclude>**/*.tsv</exclude>-->
-                            <!--<exclude>**/*.rst</exclude>-->
-                            <!--<exclude>**/*.tpl</exclude>-->
-                            <!--<exclude>**/*.inc</exclude>-->
-                            <!--<exclude>**/*.conf</exclude>-->
-                            <!--<exclude>**/*.dcm</exclude>-->
-                            <!--<exclude>**/*.log</exclude>-->
-                            <!--<exclude>**/*.mako</exclude>-->
-                            <!--<exclude>**/LICENSE</exclude>-->
-                            <!--<exclude>**/NOTICE</exclude>-->
-                            <!--<exclude>**/Dockerfile</exclude>-->
-                            <!--<exclude>**/.coverage</exclude>-->
-                            <!--<exclude>**/MANIFEST.in</exclude>-->
-                            <!--<exclude>**/PKG-INFO</exclude>-->
-                            <!--<exclude>**/*.sql</exclude>-->
-                            <!--<exclude>**/*pytest-report</exclude>-->
-                            <!--<exclude>**/dist/**/setup.cfg</exclude>-->
-
-                        <!--</excludes>-->
-                    <!--</configuration>-->
-                    <!--<executions>-->
-                        <!--<execution>-->
-                            <!--<goals>-->
-                                <!--<goal>check</goal>-->
-                                <!--<goal>format</goal>-->
-                            <!--</goals>-->
-                        <!--</execution>-->
-                    <!--</executions>-->
-                <!--</plugin>-->
-
-                <!--<plugin>-->
-                    <!--<groupId>org.apache.maven.plugins</groupId>-->
-                    <!--<artifactId>maven-javadoc-plugin</artifactId>-->
-                    <!--<version>2.9</version>-->
-                    <!--<executions>-->
-                        <!--<execution>-->
-                            <!--<id>attach-javadocs</id>-->
-                            <!--<goals>-->
-                                <!--<goal>jar</goal>-->
-                            <!--</goals>-->
-                        <!--</execution>-->
-                    <!--</executions>-->
-                <!--</plugin>-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>2.8.2</version>
                 </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
@@ -467,6 +389,7 @@
                         <pushChanges>false</pushChanges>
                     </configuration>
                 </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
@@ -516,6 +439,7 @@
                     </filesets>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
@@ -601,11 +525,6 @@
             <version>1.0-01232017-SNAPSHOT</version>
             <classifier>shaded-protobuf</classifier>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.trustedanalytics</groupId>-->
-            <!--<artifactId>sparktk-core</artifactId>-->
-            <!--<version>master-SNAPSHOT</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.joda</groupId>
             <artifactId>joda-convert</artifactId>
@@ -617,16 +536,7 @@
             <artifactId>hadoop-yarn-api</artifactId>
             <version>2.7.3</version>
         </dependency>
-
-
-
-
-
-
     </dependencies>
     </dependencyManagement>
-
-
-
 
 </project>
