@@ -24,7 +24,7 @@ val schema = StructType(List(StructField("id", IntegerType), StructField("Intege
 val rdd = sparkSession.sparkContext.parallelize(testRows)
 
 val df: DataFrame = sparkSession.createDataFrame(rdd, schema)
-df.write.format("tf").save(path)
+df.write.format("tensorflow").save(path)
 
-val importedDf: DataFrame = sparkSession.read.format("tf").load(path)
+val importedDf: DataFrame = sparkSession.read.format("tensorflow").load(path)
 ```

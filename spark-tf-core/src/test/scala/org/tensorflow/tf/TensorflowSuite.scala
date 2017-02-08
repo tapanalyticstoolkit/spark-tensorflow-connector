@@ -32,7 +32,7 @@ import org.tensorflow.serde.{ DefaultTfRecordRowDecoder, DefaultTfRecordRowEncod
 
 import scala.collection.JavaConverters._
 
-class TfSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAfterAll {
+class TensorflowSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAfterAll {
 
   val TF_SANDBOX_DIR = "tf-sandbox"
   val file = new File(TF_SANDBOX_DIR)
@@ -59,9 +59,9 @@ class TfSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAf
       val rdd = sparkSession.sparkContext.parallelize(testRows)
 
       val df: DataFrame = sparkSession.createDataFrame(rdd, schema)
-      df.write.format("tf").save(path)
+      df.write.format("tensorflow").save(path)
 
-      val importedDf: DataFrame = sparkSession.read.format("tf").load(path)
+      val importedDf: DataFrame = sparkSession.read.format("tensorflow").load(path)
       val actualDf = importedDf.select("id", "IntegerTypelabel", "LongTypelabel", "FloatTypelabel", "DoubleTypelabel", "vectorlabel", "name")
 
       val expectedRows = df.collect()
