@@ -15,7 +15,7 @@ class DefaultSource
   /**
    * Short alias for spark-tensorflow data source.
    */
-  override def shortName(): String = "tf"
+  override def shortName(): String = "tensorflow"
 
   // Writes DataFrame as TensorFlow Records
   override def createRelation(
