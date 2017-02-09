@@ -17,35 +17,18 @@
 
 package org.tensorflow.tf
 
-import java.io.File
-
-import org.apache.commons.io.FileUtils
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.{ DataFrame, Row }
 import org.apache.spark.sql.catalyst.expressions.{ GenericRow, GenericRowWithSchema }
 import org.apache.spark.sql.types._
-import org.scalatest.{ BeforeAndAfterAll, Matchers }
-import org.tensorflow.{ TensorflowInferSchema, TestingSparkSessionWordSpec }
+import org.tensorflow.TensorflowInferSchema
 import org.tensorflow.example._
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
 import org.tensorflow.serde.{ DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder }
 
 import scala.collection.JavaConverters._
 
-class TfSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAfterAll {
-
-  val TF_SANDBOX_DIR = "tf-sandbox"
-  val file = new File(TF_SANDBOX_DIR)
-
-  override def beforeAll() = {
-    super.beforeAll()
-    file.mkdirs()
-  }
-
-  override def afterAll() = {
-    FileUtils.deleteQuietly(file)
-    super.afterAll()
-  }
+class TensorflowSuite extends SharedSparkSessionSuite {
 
   "Spark TensorFlow module" should {
 
@@ -55,13 +38,22 @@ class TfSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAf
       val testRows: Array[Row] = Array(
         new GenericRow(Array[Any](11, 1, 23L, 10.0F, 14.0, List(1.0, 2.0), "r1")),
         new GenericRow(Array[Any](21, 2, 24L, 12.0F, 15.0, List(2.0, 2.0), "r2")))
-      val schema = StructType(List(StructField("id", IntegerType), StructField("IntegerTypelabel", IntegerType), StructField("LongTypelabel", LongType), StructField("FloatTypelabel", FloatType), StructField("DoubleTypelabel", DoubleType), StructField("vectorlabel", ArrayType(DoubleType, true)), StructField("name", StringType)))
-      val rdd = sparkSession.sparkContext.parallelize(testRows)
 
-      val df: DataFrame = sparkSession.createDataFrame(rdd, schema)
-      df.write.format("tf").save(path)
+      val schema = StructType(List(
+        StructField("id", IntegerType),
+        StructField("IntegerTypelabel", IntegerType),
+        StructField("LongTypelabel", LongType),
+        StructField("FloatTypelabel", FloatType),
+        StructField("DoubleTypelabel", DoubleType),
+        StructField("vectorlabel", ArrayType(DoubleType, true)),
+        StructField("name", StringType)))
 
-      val importedDf: DataFrame = sparkSession.read.format("tf").load(path)
+      val rdd = spark.sparkContext.parallelize(testRows)
+
+      val df: DataFrame = spark.createDataFrame(rdd, schema)
+      df.write.format("tensorflow").save(path)
+
+      val importedDf: DataFrame = spark.read.format("tensorflow").load(path)
       val actualDf = importedDf.select("id", "IntegerTypelabel", "LongTypelabel", "FloatTypelabel", "DoubleTypelabel", "vectorlabel", "name")
 
       val expectedRows = df.collect()
@@ -140,9 +132,14 @@ class TfSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAf
 
       //Here Vector with null's are not supported
       val expectedRow = new GenericRow(Array[Any](1, 23L, 10.0F, 14.0, List(1.0, 2.0), "r1"))
-      //val schema = new StructType(List(StructField("IntegerTypelabel", IntegerType), StructField("LongTypelabel", LongType), StructField("FloatTypelabel", FloatType), StructField("DoubleTypelabel", DoubleType), StructField("vectorlabel", vector(2)), StructField("strlabel", string)))
-
-      val schema = StructType(List(StructField("IntegerTypelabel", IntegerType), StructField("LongTypelabel", LongType), StructField("FloatTypelabel", FloatType), StructField("DoubleTypelabel", DoubleType), StructField("vectorlabel", ArrayType(DoubleType)), StructField("strlabel", StringType)))
+      
+      val schema = StructType(List(
+        StructField("IntegerTypelabel", IntegerType),
+        StructField("LongTypelabel", LongType),
+        StructField("FloatTypelabel", FloatType),
+        StructField("DoubleTypelabel", DoubleType),
+        StructField("vectorlabel", ArrayType(DoubleType)),
+        StructField("strlabel", StringType)))
 
       //Build example
       val intFeature = Int64List.newBuilder().addValue(1)
@@ -211,7 +208,7 @@ class TfSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAf
         .setFeatures(features2)
         .build()
 
-      val exampleRDD: RDD[Example] = sparkSession.sparkContext.parallelize(List(example1, example2))
+      val exampleRDD: RDD[Example] = spark.sparkContext.parallelize(List(example1, example2))
 
       val actualSchema = TensorflowInferSchema(exampleRDD)
 

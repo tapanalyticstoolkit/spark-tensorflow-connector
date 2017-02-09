@@ -1,3 +1,4 @@
+
 /**
  *  Copyright (c) 2016 Intel Corporation 
  *
@@ -13,29 +14,33 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.tensorflow
 
-import org.apache.spark.sql.SparkSession
-import org.scalatest.{ BeforeAndAfterAll, WordSpec }
+package org.tensorflow.tf
 
-trait TestingSparkSessionWordSpec extends WordSpec with BeforeAndAfterAll {
+import java.io.File
 
-  var sparkSession: SparkSession = null
+import org.apache.commons.io.FileUtils
+import org.apache.spark.SharedSparkSession
+import org.scalatest.{ WordSpecLike, BeforeAndAfterAll, Matchers }
+import org.junit.After
+import org.junit.Before
 
+
+trait BaseSuite extends WordSpecLike with Matchers with BeforeAndAfterAll
+
+class SharedSparkSessionSuite extends SharedSparkSession with BaseSuite {
+  val TF_SANDBOX_DIR = "tf-sandbox"
+  val file = new File(TF_SANDBOX_DIR)
+
+  @Before
   override def beforeAll() = {
-    sparkSession = TestingSparkSession.sparkSession
+    super.setUp()
+    file.mkdirs()
   }
 
-  /**
-   * Clean up after the test is done
-   */
+  @After
   override def afterAll() = {
-    TestingSparkSession.cleanUp()
-    sparkSession = null
-  }
-
-  /** assertion that two doubles are almost equal */
-  def assertAlmostEqual(x: Double, y: Double, tolerance: Double = 1e-6): Unit = {
-    assert(Math.abs(x - y) < tolerance, s"${x} should equal ${y}+-${tolerance}")
+    FileUtils.deleteQuietly(file)
+    super.tearDown()
   }
 }

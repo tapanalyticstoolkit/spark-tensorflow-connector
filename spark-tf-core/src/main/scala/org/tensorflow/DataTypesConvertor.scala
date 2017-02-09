@@ -18,7 +18,7 @@ package org.tensorflow
 import scala.language.implicitConversions
 
 /**
- * Datatypes supported
+ * DataTypes supported
  */
 object DataTypesConvertor {
 
@@ -48,3 +48,4 @@ object DataTypesConvertor {
     }
   }
 }
+

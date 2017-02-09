@@ -1,16 +1,13 @@
 package org.tensorflow
 
-import org.apache.hadoop.io.{ NullWritable, BytesWritable }
-import org.apache.spark.rdd.RDD
+import org.apache.hadoop.io.{ BytesWritable, NullWritable }
 import org.apache.spark.sql._
 import org.apache.spark.sql.sources._
-import org.apache.spark.sql.types.StructType
-import org.tensorflow.example.Example
-import org.tensorflow.hadoop.io.TFRecordFileInputFormat
-import org.tensorflow.serde.DefaultTfRecordRowDecoder
+import org.tensorflow.hadoop.io.TFRecordFileOutputFormat
+import org.tensorflow.serde.DefaultTfRecordRowEncoder
 
 /**
- * Provides access to tensorflow record source
+ * Provides access to TensorFlow record source
  */
 class DefaultSource
     extends DataSourceRegister with CreatableRelationProvider with RelationProvider {
@@ -18,9 +15,9 @@ class DefaultSource
   /**
    * Short alias for spark-tensorflow data source.
    */
-  override def shortName(): String = "tf"
+  override def shortName(): String = "tensorflow"
 
-  // write path
+  // Writes DataFrame as TensorFlow Records
   override def createRelation(
     sqlContext: SQLContext,
     mode: SaveMode,
@@ -28,34 +25,19 @@ class DefaultSource
     data: DataFrame): BaseRelation = {
 
     val path = parameters("path")
-    ExportToTensorflow.exportToTensorflow(data, path)
-    TfRelation(parameters)(sqlContext.sparkSession)
+
+    //Export DataFrame as TFRecords
+    val features = data.rdd.map(row => {
+      val example = DefaultTfRecordRowEncoder.encodeTfRecord(row)
+      (new BytesWritable(example.toByteArray), NullWritable.get())
+    })
+    features.saveAsNewAPIHadoopFile[TFRecordFileOutputFormat](path)
+
+    TensorflowRelation(parameters)(sqlContext.sparkSession)
   }
 
-  // read path
-  override def createRelation(sqlContext: SQLContext, parameters: Map[String, String]): TfRelation = {
-    TfRelation(parameters)(sqlContext.sparkSession)
+  // Reads TensorFlow Records into DataFrame
+  override def createRelation(sqlContext: SQLContext, parameters: Map[String, String]): TensorflowRelation = {
+    TensorflowRelation(parameters)(sqlContext.sparkSession)
   }
-
-}
-
-case class TfRelation(options: Map[String, String])(@transient val session: SparkSession) extends BaseRelation with TableScan {
-
-  lazy val (tf_rdd, tf_schema) = {
-    val rdd = session.sparkContext.newAPIHadoopFile(options("path"), classOf[TFRecordFileInputFormat], classOf[BytesWritable], classOf[NullWritable])
-
-    val exampleRdd = rdd.map {
-      case (bytesWritable, nullWritable) => Example.parseFrom(bytesWritable.getBytes)
-    }
-
-    val finalSchema = TensorflowInferSchema(exampleRdd)
-
-    (exampleRdd.map(example => DefaultTfRecordRowDecoder.decodeTfRecord(example, finalSchema)), finalSchema)
-  }
-
-  override def sqlContext: SQLContext = session.sqlContext
-
-  override def schema: StructType = tf_schema
-
-  override def buildScan(): RDD[Row] = tf_rdd
 }
