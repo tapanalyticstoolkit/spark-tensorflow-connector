@@ -15,10 +15,8 @@
  */
 package org.tensorflow.serde
 
-import org.tensorflow.hadoop.shaded.protobuf.ByteString
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.types._
-import org.tensorflow.DataTypesConvertor
 import org.tensorflow.example._
 
 trait TfRecordRowEncoder {
@@ -35,8 +33,15 @@ trait TfRecordRowEncoder {
 
 object DefaultTfRecordRowEncoder extends TfRecordRowEncoder {
 
+  /**
+   * Encodes each Row as TensorFlow "Example"
+   *
+   * Maps each column in Row to one of Int64List, FloatList, BytesList based on the column data type
+   *
+   * @param row a DataFrame row
+   * @return TensorFlow Example
+   */
   def encodeTfRecord(row: Row): Example = {
-
     val features = Features.newBuilder()
     val example = Example.newBuilder()
 

@@ -1,30 +1,30 @@
 
 /**
- *  Copyright (c) 2016 Intel Corporation 
+ * Copyright (c) 2016 Intel Corporation 
  *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 package org.tensorflow.tf
 
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.{ DataFrame, Row }
-import org.apache.spark.sql.catalyst.expressions.{ GenericRow, GenericRowWithSchema }
+import org.apache.spark.sql.{DataFrame, Row}
+import org.apache.spark.sql.catalyst.expressions.{GenericRow, GenericRowWithSchema}
 import org.apache.spark.sql.types._
 import org.tensorflow.TensorflowInferSchema
 import org.tensorflow.example._
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
-import org.tensorflow.serde.{ DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder }
+import org.tensorflow.serde.{DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder}
 
 import scala.collection.JavaConverters._
 
@@ -59,9 +59,7 @@ class TensorflowSuite extends SharedSparkSessionSuite {
       val expectedRows = df.collect()
       val actualRows = actualDf.collect()
 
-      println(expectedRows)
-      println(actualRows)
-      //expectedRows should equal(actualRows)
+      expectedRows should equal(actualRows)
     }
 
     "Encode given Row as TensorFlow example" in {
@@ -83,39 +81,29 @@ class TensorflowSuite extends SharedSparkSessionSuite {
       import org.tensorflow.example.Feature
 
       //Verify each Datatype converted to TensorFlow datatypes
-      example.getFeatures.getFeatureMap.asScala.foreach {
-        case (featureName, feature) =>
-          featureName match {
-            case "IntegerTypelabel" => {
-              assert(feature.getKindCase.getNumber == Feature.INT64_LIST_FIELD_NUMBER)
-              assert(feature.getInt64List.getValue(0).toInt == 1)
-            }
-            case "LongTypelabel" => {
-              assert(feature.getKindCase.getNumber == Feature.INT64_LIST_FIELD_NUMBER)
-              assert(feature.getInt64List.getValue(0).toInt == 23)
-            }
-            case "FloatTypelabel" => {
-              assert(feature.getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER)
-              assert(feature.getFloatList.getValue(0) == 10.0F)
-            }
-            case "DoubleTypelabel" => {
-              assert(feature.getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER)
-              assert(feature.getFloatList.getValue(0) == 14.0F)
-            }
-            case "vectorlabel" => {
-              assert(feature.getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER)
-              assert(feature.getFloatList.getValueList.toArray === expectedFloatArray)
-            }
-            case "strlabel" => {
-              assert(feature.getKindCase.getNumber == Feature.BYTES_LIST_FIELD_NUMBER)
-              assert(feature.getBytesList.toByteString.toStringUtf8.trim == "r1")
-            }
-          }
-      }
+      val featureMap = example.getFeatures.getFeatureMap.asScala
+      assert(featureMap("IntegerTypelabel").getKindCase.getNumber == Feature.INT64_LIST_FIELD_NUMBER)
+      assert(featureMap("IntegerTypelabel").getInt64List.getValue(0).toInt == 1)
+
+      assert(featureMap("LongTypelabel").getKindCase.getNumber == Feature.INT64_LIST_FIELD_NUMBER)
+      assert(featureMap("LongTypelabel").getInt64List.getValue(0).toInt == 23)
+
+      assert(featureMap("FloatTypelabel").getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER)
+      assert(featureMap("FloatTypelabel").getFloatList.getValue(0) == 10.0F)
+
+      assert(featureMap("DoubleTypelabel").getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER)
+      assert(featureMap("DoubleTypelabel").getFloatList.getValue(0) == 14.0F)
+
+      assert(featureMap("vectorlabel").getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER)
+      assert(featureMap("vectorlabel").getFloatList.getValueList.toArray === expectedFloatArray)
+
+      assert(featureMap("strlabel").getKindCase.getNumber == Feature.BYTES_LIST_FIELD_NUMBER)
+      assert(featureMap("strlabel").getBytesList.toByteString.toStringUtf8.trim == "r1")
+
     }
 
     "Throw null pointer exception for a vector with null values during Encode" in {
-      intercept[NullPointerException] {
+      intercept[Exception] {
         val schemaStructType = StructType(Array(
           StructField("vectorlabel", ArrayType(DoubleType, true))
         ))
@@ -131,8 +119,8 @@ class TensorflowSuite extends SharedSparkSessionSuite {
     "Decode given TensorFlow Example as Row" in {
 
       //Here Vector with null's are not supported
-      val expectedRow = new GenericRow(Array[Any](1, 23L, 10.0F, 14.0, List(1.0, 2.0), "r1"))
-      
+      val expectedRow = new GenericRow(Array[Any](1, 23L, 10.0F, 14.0, Seq(1.0, 2.0), "r1"))
+
       val schema = StructType(List(
         StructField("IntegerTypelabel", IntegerType),
         StructField("LongTypelabel", LongType),

@@ -19,9 +19,18 @@ import org.tensorflow.example.Feature
 import scala.collection.JavaConverters._
 
 trait FeatureDecoder[T] {
+  /**
+   * Decodes each TensorFlow "Feature" to desired Scala type
+   * 
+   * @param feature TensorFlow Feature
+   * @return Decoded feature
+   */
   def decode(feature: Feature): T
 }
 
+/**
+ * Decode TensorFlow "Feature" to Integer
+ */
 object IntFeatureDecoder extends FeatureDecoder[Int] {
   override def decode(feature: Feature): Int = {
     try {
@@ -30,13 +39,15 @@ object IntFeatureDecoder extends FeatureDecoder[Int] {
       int64List.get(0).intValue()
     }
     catch {
-      case ex: Exception => {
-        throw new TypeConversionException(s"Cannot convert feature to Int.", ex)
-      }
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Int.", ex)
     }
   }
 }
 
+/**
+ * Decode TensorFlow "Feature" to Long
+ */
 object LongFeatureDecoder extends FeatureDecoder[Long] {
   override def decode(feature: Feature): Long = {
     try {
@@ -45,13 +56,15 @@ object LongFeatureDecoder extends FeatureDecoder[Long] {
       int64List.get(0).longValue()
     }
     catch {
-      case ex: Exception => {
-        throw new TypeConversionException(s"Cannot convert feature to Long.", ex)
-      }
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Long.", ex)
     }
   }
 }
 
+/**
+ * Decode TensorFlow "Feature" to Float
+ */
 object FloatFeatureDecoder extends FeatureDecoder[Float] {
   override def decode(feature: Feature): Float = {
     try {
@@ -60,13 +73,15 @@ object FloatFeatureDecoder extends FeatureDecoder[Float] {
       floatList.get(0).floatValue()
     }
     catch {
-      case ex: Exception => {
-        throw new TypeConversionException(s"Cannot convert feature to Float.", ex)
-      }
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Float.", ex)
     }
   }
 }
 
+/**
+ * Decode TensorFlow "Feature" to Double
+ */
 object DoubleFeatureDecoder extends FeatureDecoder[Double] {
   override def decode(feature: Feature): Double = {
     try {
@@ -75,78 +90,87 @@ object DoubleFeatureDecoder extends FeatureDecoder[Double] {
       floatList.get(0).doubleValue()
     }
     catch {
-      case ex: Exception => {
-        throw new TypeConversionException(s"Cannot convert feature to Double.", ex)
-      }
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Double.", ex)
     }
   }
 }
 
-object IntArrayFeatureDecoder extends FeatureDecoder[Array[Int]] {
-  override def decode(feature: Feature): Array[Int] = {
+/**
+ * Decode TensorFlow "Feature" to Seq[Int]
+ */
+object IntListFeatureDecoder extends FeatureDecoder[Seq[Int]] {
+  override def decode(feature: Feature): Seq[Int] = {
     try {
       val array = feature.getInt64List.getValueList.asScala.toArray
       array.map(_.toInt)
     }
     catch {
-      case ex: Exception => {
-        throw new TypeConversionException(s"Cannot convert feature to Array[Int].", ex)
-      }
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Seq[Int].", ex)
     }
   }
 }
 
-object LongArrayFeatureDecoder extends FeatureDecoder[Array[Long]] {
-  override def decode(feature: Feature): Array[Long] = {
+/**
+ * Decode TensorFlow "Feature" to Seq[Long]
+ */
+object LongListFeatureDecoder extends FeatureDecoder[Seq[Long]] {
+  override def decode(feature: Feature): Seq[Long] = {
     try {
       val array = feature.getInt64List.getValueList.asScala.toArray
       array.map(_.toLong)
     }
     catch {
-      case ex: Exception => {
-        throw new TypeConversionException(s"Cannot convert feature to Array[Long].", ex)
-      }
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Array[Long].", ex)
     }
   }
 }
 
-object FloatArrayFeatureDecoder extends FeatureDecoder[Array[Float]] {
-  override def decode(feature: Feature): Array[Float] = {
+/**
+ * Decode TensorFlow "Feature" to Seq[Float]
+ */
+object FloatArrayFeatureDecoder extends FeatureDecoder[Seq[Float]] {
+  override def decode(feature: Feature): Seq[Float] = {
     try {
       val array = feature.getFloatList.getValueList.asScala.toArray
       array.map(_.toFloat)
     }
     catch {
-      case ex: Exception => {
-        throw new TypeConversionException(s"Cannot convert feature to Array[Float].", ex)
-      }
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Array[Float].", ex)
     }
   }
 }
 
-object DoubleArrayFeatureDecoder extends FeatureDecoder[Array[Double]] {
-  override def decode(feature: Feature): Array[Double] = {
+/**
+ * Decode TensorFlow "Feature" to Seq[Double]
+ */
+object DoubleArrayFeatureDecoder extends FeatureDecoder[Seq[Double]] {
+  override def decode(feature: Feature): Seq[Double] = {
     try {
       val array = feature.getFloatList.getValueList.asScala.toArray
       array.map(_.toDouble)
     }
     catch {
-      case ex: Exception => {
-        throw new TypeConversionException(s"Cannot convert feature to Array[Double].", ex)
-      }
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Array[Double].", ex)
     }
   }
 }
 
+/**
+ * Decode TensorFlow "Feature" to String
+ */
 object StringFeatureDecoder extends FeatureDecoder[String] {
   override def decode(feature: Feature): String = {
     try {
       feature.getBytesList.toByteString.toStringUtf8.trim
     }
     catch {
-      case ex: Exception => {
-        throw new TypeConversionException(s"Cannot convert feature to String.", ex)
-      }
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to String.", ex)
     }
   }
 }
