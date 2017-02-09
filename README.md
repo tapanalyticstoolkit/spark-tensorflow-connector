@@ -1,9 +1,16 @@
 # spark-tensorflow-connector
 
 
-This directory contains a examples of integrating [Apache Spark](http://spark.apache.org/)
-with tensorflow. This module provides importing TFRecords as SQL DataFrame and exporting DataFrame as TFRecords.
+This repo contains an example showing how to integrate [Apache Spark](http://spark.apache.org/)
+with TensorFlow. The example implements importing TFRecords as SQL DataFrame and exporting DataFrame as TFRecords.
 
+## What's new
+
+This is the initial release of the `spark-tensorflow-connector` repo.
+
+## Known issues
+
+None.
 
 ## Prerequisites
 
@@ -15,7 +22,7 @@ with tensorflow. This module provides importing TFRecords as SQL DataFrame and e
    with your spark version.
 
 
-The following code snippet demonstrates the usage.
+The following code snippet demonstrates usage.
 
 
 
