@@ -42,37 +42,15 @@ object DefaultTfRecordRowDecoder extends TfRecordRowDecoder {
         val index = schema.fieldIndex(featureName)
         val colDataType = schema.fields(index).dataType
         row(index) = colDataType match {
-          case dtype if dtype.equals(IntegerType) | dtype.equals(LongType) => {
-            val dataList = feature.getInt64List.getValueList
-            if (dataList.size() == 1) {
-              val p = dataList.get(0)
-              p.intValue()
-            }
-            else
-              throw new RuntimeException("Mismatch in schema type, expected int32 or int64")
-          }
-          case dtype if dtype.equals(FloatType) | dtype.equals(DoubleType) => {
-            val dataList = feature.getFloatList.getValueList
-            if (dataList.size() == 1) {
-              val p = dataList.get(0)
-              p.floatValue()
-            }
-            else
-              throw new RuntimeException("Mismatch in schema type, expected float32 or float64")
-          }
-          case vtype: ArrayType => {
-            feature.getKindCase.getNumber match {
-              case Feature.INT64_LIST_FIELD_NUMBER => {
-                val datalist = feature.getInt64List.getValueList.asScala.toList
-                datalist
-              }
-              case Feature.FLOAT_LIST_FIELD_NUMBER => {
-                val datalist = feature.getFloatList.getValueList.asScala.toList
-                datalist
-              }
-            }
-          }
-          case dtype if dtype.equals(StringType) => feature.getBytesList.toByteString.toStringUtf8.trim
+          case IntegerType => IntFeatureDecoder.decode(feature)
+          case LongType => LongFeatureDecoder.decode(feature)
+          case FloatType => FloatFeatureDecoder.decode(feature)
+          case DoubleType => DoubleFeatureDecoder.decode(feature)
+          case ArrayType(IntegerType, _) => IntArrayFeatureDecoder.decode(feature)
+          case ArrayType(LongType, _) => LongArrayFeatureDecoder.decode(feature)
+          case ArrayType(FloatType, _) => FloatArrayFeatureDecoder.decode(feature)
+          case ArrayType(DoubleType, _) => DoubleArrayFeatureDecoder.decode(feature)
+          case StringType => StringFeatureDecoder.decode(feature)
           case _ => throw new RuntimeException("Unsupported dataype...!!")
         }
     }

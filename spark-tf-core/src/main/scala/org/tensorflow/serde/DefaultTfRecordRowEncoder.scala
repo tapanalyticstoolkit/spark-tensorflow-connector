@@ -1,17 +1,17 @@
 /**
- *  Copyright (c) 2016 Intel Corporation 
+ * Copyright (c) 2016 Intel Corporation 
  *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package org.tensorflow.serde
 
@@ -40,52 +40,19 @@ object DefaultTfRecordRowEncoder extends TfRecordRowEncoder {
     val features = Features.newBuilder()
     val example = Example.newBuilder()
 
-    val schema = row.schema
     row.schema.zipWithIndex.map {
       case (structField, index) =>
-        structField.dataType match {
-          case IntegerType => {
-            val intResult = Int64List.newBuilder().addValue(row.getInt(index).toLong).build()
-            features.putFeature(structField.name, Feature.newBuilder().setInt64List(intResult).build())
-          }
-          case LongType => {
-            val intResult = Int64List.newBuilder().addValue(row.getLong(index)).build()
-            features.putFeature(structField.name, Feature.newBuilder().setInt64List(intResult).build())
-          }
-          case FloatType => {
-            val floatResult = FloatList.newBuilder().addValue(row.getFloat(index)).build()
-            features.putFeature(structField.name, Feature.newBuilder().setFloatList(floatResult).build())
-          }
-          case DoubleType => {
-            val floatResult = FloatList.newBuilder().addValue(row.getDouble(index).toFloat).build()
-            features.putFeature(structField.name, Feature.newBuilder().setFloatList(floatResult).build())
-          }
-          case ArrayType(DoubleType, true) => {
-
-            val wrappedArr = row.get(index) match {
-              case x: scala.collection.mutable.WrappedArray[_] => x.toArray[Any]
-              case x: Array[_] => x
-              case _ => throw new RuntimeException("Unable to cast to Array[Double]")
-            }
-            val floatListBuilder = FloatList.newBuilder()
-            wrappedArr.foreach(x => {
-              val y: Float = if (x == null) {
-                throw new NullPointerException("FloatList with null values are not supported")
-              }
-              else {
-                DataTypesConvertor.toFloat(x)
-              }
-              floatListBuilder.addValue(y)
-            })
-            val floatList = floatListBuilder.build()
-            features.putFeature(structField.name, Feature.newBuilder().setFloatList(floatList).build())
-          }
-          case _ => {
-            val byteList = BytesList.newBuilder().addValue(ByteString.copyFrom(row.getString(index).getBytes)).build()
-            features.putFeature(structField.name, Feature.newBuilder().setBytesList(byteList).build())
-          }
+        val value = row.get(index)
+        val feature = structField.dataType match {
+          case IntegerType | LongType => Int64ListFeatureEncoder.encode(value)
+          case FloatType | DoubleType => FloatListFeatureEncoder.encode(value)
+          case ArrayType(IntegerType, _) | ArrayType(LongType, _) => Int64ListFeatureEncoder.encode(value)
+          case ArrayType(DoubleType, _) => FloatListFeatureEncoder.encode(value)
+          case _ => ByteListFeatureEncoder.encode(value)
         }
+        features.putFeature(structField.name, feature)
     }
+
     features.build()
     example.setFeatures(features)
     example.build()
