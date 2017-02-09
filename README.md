@@ -4,7 +4,7 @@
 This directory contains a examples of integrating [Apache Spark](http://spark.apache.org/)
 with tensorflow. This module provides importing TFRecords as SQL DataFrame and exporting DataFrame as TFRecords.
 
-The Following code snippet demonstrates the usage.
+The following code snippet demonstrates the usage.
 
 
 
