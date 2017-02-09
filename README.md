@@ -12,7 +12,7 @@ None.
 
 ## Prerequisites
 
-1. [Apache Spark 2.1.0](http://spark.apache.org/)
+1. [Apache Spark 2.0 (or later)](http://spark.apache.org/)
 
 2. [Apache Maven](https://maven.apache.org/)
 
