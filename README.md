@@ -1,8 +1,6 @@
 # spark-tensorflow-connector
 
-
-This repo contains an example showing how to integrate [Apache Spark](http://spark.apache.org/)
-with TensorFlow. The example implements importing TFRecords as SQL DataFrame and exporting DataFrame as TFRecords.
+This repo contains library for loading and storing TensorFlow records with [Apache Spark](http://spark.apache.org/). The library implements data import from the standard TensorFlow record format ([TFRecords]( https://www.tensorflow.org/how_tos/reading_data/)) into Spark SQL DataFrames, and data export from DataFrames to TensorFlow records.
 
 ## What's new
 
@@ -14,12 +12,9 @@ None.
 
 ## Prerequisites
 
-1. [Apache Spark 2.0](http://spark.apache.org/)
+1. [Apache Spark 2.1.0](http://spark.apache.org/)
 
 2. [Apache Maven](https://maven.apache.org/)
-
-4. Tested with Apache Spark 2.0 and scala version 2.11.8. Patches are welcome if there are incompatibilities
-   with your spark version.
 
 
 The following code snippet demonstrates usage.
