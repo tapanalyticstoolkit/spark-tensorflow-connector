@@ -55,7 +55,7 @@ class TensorflowSuite extends TestingSparkSessionWordSpec with Matchers with Bef
       val testRows: Array[Row] = Array(
         new GenericRow(Array[Any](11, 1, 23L, 10.0F, 14.0, List(1.0, 2.0), "r1")),
         new GenericRow(Array[Any](21, 2, 24L, 12.0F, 15.0, List(2.0, 2.0), "r2")))
-
+      
       val schema = StructType(List(
         StructField("id", IntegerType),
         StructField("IntegerTypelabel", IntegerType),
@@ -64,9 +64,7 @@ class TensorflowSuite extends TestingSparkSessionWordSpec with Matchers with Bef
         StructField("DoubleTypelabel", DoubleType),
         StructField("vectorlabel", ArrayType(DoubleType, true)),
         StructField("name", StringType)))
-
-      val rdd = sparkSession.sparkContext.parallelize(testRows)
-
+      
       val df: DataFrame = sparkSession.createDataFrame(rdd, schema)
       df.write.format("tensorflow").save(path)
 
@@ -149,7 +147,7 @@ class TensorflowSuite extends TestingSparkSessionWordSpec with Matchers with Bef
 
       //Here Vector with null's are not supported
       val expectedRow = new GenericRow(Array[Any](1, 23L, 10.0F, 14.0, List(1.0, 2.0), "r1"))
-
+      
       val schema = StructType(List(
         StructField("IntegerTypelabel", IntegerType),
         StructField("LongTypelabel", LongType),
