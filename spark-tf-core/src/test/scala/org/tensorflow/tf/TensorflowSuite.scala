@@ -17,35 +17,18 @@
 
 package org.tensorflow.tf
 
-import java.io.File
-
-import org.apache.commons.io.FileUtils
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.{ DataFrame, Row }
 import org.apache.spark.sql.catalyst.expressions.{ GenericRow, GenericRowWithSchema }
 import org.apache.spark.sql.types._
-import org.scalatest.{ BeforeAndAfterAll, Matchers }
-import org.tensorflow.{ TensorflowInferSchema, TestingSparkSessionWordSpec }
+import org.tensorflow.TensorflowInferSchema
 import org.tensorflow.example._
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
 import org.tensorflow.serde.{ DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder }
 
 import scala.collection.JavaConverters._
 
-class TensorflowSuite extends TestingSparkSessionWordSpec with Matchers with BeforeAndAfterAll {
-
-  val TF_SANDBOX_DIR = "tf-sandbox"
-  val file = new File(TF_SANDBOX_DIR)
-
-  override def beforeAll() = {
-    super.beforeAll()
-    file.mkdirs()
-  }
-
-  override def afterAll() = {
-    FileUtils.deleteQuietly(file)
-    super.afterAll()
-  }
+class TensorflowSuite extends SharedSparkSessionSuite {
 
   "Spark TensorFlow module" should {
 
@@ -64,11 +47,13 @@ class TensorflowSuite extends TestingSparkSessionWordSpec with Matchers with Bef
         StructField("DoubleTypelabel", DoubleType),
         StructField("vectorlabel", ArrayType(DoubleType, true)),
         StructField("name", StringType)))
-      
-      val df: DataFrame = sparkSession.createDataFrame(rdd, schema)
+
+      val rdd = spark.sparkContext.parallelize(testRows)
+
+      val df: DataFrame = spark.createDataFrame(rdd, schema)
       df.write.format("tensorflow").save(path)
 
-      val importedDf: DataFrame = sparkSession.read.format("tensorflow").load(path)
+      val importedDf: DataFrame = spark.read.format("tensorflow").load(path)
       val actualDf = importedDf.select("id", "IntegerTypelabel", "LongTypelabel", "FloatTypelabel", "DoubleTypelabel", "vectorlabel", "name")
 
       val expectedRows = df.collect()
@@ -223,7 +208,7 @@ class TensorflowSuite extends TestingSparkSessionWordSpec with Matchers with Bef
         .setFeatures(features2)
         .build()
 
-      val exampleRDD: RDD[Example] = sparkSession.sparkContext.parallelize(List(example1, example2))
+      val exampleRDD: RDD[Example] = spark.sparkContext.parallelize(List(example1, example2))
 
       val actualSchema = TensorflowInferSchema(exampleRDD)
 
