@@ -37,7 +37,11 @@ df.write.format("tensorflow").save(path)
 
 //Read TFRecords into DataFrame.
 //The DataFrame schema is automatically inferred from the TFRecords.
-val importedDf: DataFrame = spark.read.format("tensorflow").load(path)
+val importedDf1: DataFrame = spark.read.format("tensorflow").load(path)
+importedDf1.show()
+
+//Provide custom schema while loading
+val importedDf: DataFrame = spark.read.format("tensorflow").schema(schema).load(path)
 importedDf.show()
 
 ```

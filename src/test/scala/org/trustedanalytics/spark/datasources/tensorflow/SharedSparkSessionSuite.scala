@@ -33,6 +33,7 @@ class SharedSparkSessionSuite extends SharedSparkSession with BaseSuite {
   @Before
   override def beforeAll() = {
     super.setUp()
+    FileUtils.deleteQuietly(file)
     file.mkdirs()
   }
 
