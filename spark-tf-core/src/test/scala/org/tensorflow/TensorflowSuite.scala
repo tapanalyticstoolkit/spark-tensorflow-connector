@@ -15,16 +15,15 @@
  *  limitations under the License.
  */
 
-package org.tensorflow.tf
+package org.tensorflow
 
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.{ DataFrame, Row }
-import org.apache.spark.sql.catalyst.expressions.{ GenericRow, GenericRowWithSchema }
+import org.apache.spark.sql.{DataFrame, Row}
+import org.apache.spark.sql.catalyst.expressions.{GenericRow, GenericRowWithSchema}
 import org.apache.spark.sql.types._
-import org.tensorflow.TensorflowInferSchema
 import org.tensorflow.example._
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
-import org.tensorflow.serde.{ DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder }
+import org.tensorflow.serde.{DefaultTfRecordRowDecoder, DefaultTfRecordRowEncoder}
 
 import scala.collection.JavaConverters._
 

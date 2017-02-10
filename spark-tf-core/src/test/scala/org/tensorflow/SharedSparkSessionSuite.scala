@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 
-package org.tensorflow.tf
+package org.tensorflow
 
 import java.io.File
 
