@@ -41,7 +41,7 @@ val importedDf1: DataFrame = spark.read.format("tensorflow").load(path)
 importedDf1.show()
 
 //Provide custom schema while loading
-val importedDf: DataFrame = spark.read.format("tensorflow").schema(schema).load(path)
-importedDf.show()
+val importedDf2: DataFrame = spark.read.format("tensorflow").schema(schema).load(path)
+importedDf2.show()
 
 ```
