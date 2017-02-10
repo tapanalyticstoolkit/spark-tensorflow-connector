@@ -53,7 +53,7 @@ class TensorflowSuite extends SharedSparkSessionSuite {
       df.write.format("tensorflow").save(path)
 
       val importedDf: DataFrame = spark.read.format("tensorflow").load(path)
-      val actualDf = importedDf.select("id", "IntegerTypelabel", "LongTypelabel", "FloatTypelabel", "DoubleTypelabel", "vectorlabel", "name")
+      val actualDf = importedDf.select("id", "IntegerTypelabel", "LongTypelabel", "FloatTypelabel", "DoubleTypelabel", "vectorlabel", "name").sort("name")
 
       val expectedRows = df.collect()
       val actualRows = actualDf.collect()
