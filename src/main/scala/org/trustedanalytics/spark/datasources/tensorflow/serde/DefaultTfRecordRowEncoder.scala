@@ -63,3 +63,4 @@ object DefaultTfRecordRowEncoder extends TfRecordRowEncoder {
     example.build()
   }
 }
+

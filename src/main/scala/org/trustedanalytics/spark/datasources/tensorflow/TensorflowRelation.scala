@@ -1,3 +1,18 @@
+/**
+  * Copyright (c) 2016 Intel Corporation 
+  *
+  * Licensed under the Apache License, Version 2.0 (the "License");
+  * you may not use this file except in compliance with the License.
+  * You may obtain a copy of the License at
+  *
+  *       http://www.apache.org/licenses/LICENSE-2.0
+  *
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
+  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+  */
 package org.trustedanalytics.spark.datasources.tensorflow
 
 import org.apache.hadoop.io.{BytesWritable, NullWritable}
@@ -10,7 +25,7 @@ import org.tensorflow.hadoop.io.TFRecordFileInputFormat
 import org.trustedanalytics.spark.datasources.tensorflow.serde.DefaultTfRecordRowDecoder
 
 
-case class TensorflowRelation(options: Map[String, String])(@transient val session: SparkSession) extends BaseRelation with TableScan {
+case class TensorflowRelation(options: Map[String, String], customSchema: Option[StructType]=None)(@transient val session: SparkSession) extends BaseRelation with TableScan {
 
   //Import TFRecords as DataFrame happens here
   lazy val (tf_rdd, tf_schema) = {
@@ -20,7 +35,7 @@ case class TensorflowRelation(options: Map[String, String])(@transient val sessi
       case (bytesWritable, nullWritable) => Example.parseFrom(bytesWritable.getBytes)
     }
 
-    val finalSchema = TensorflowInferSchema(exampleRdd)
+    val finalSchema = customSchema.getOrElse(TensorflowInferSchema(exampleRdd))
 
     (exampleRdd.map(example => DefaultTfRecordRowDecoder.decodeTfRecord(example, finalSchema)), finalSchema)
   }
@@ -31,3 +46,4 @@ case class TensorflowRelation(options: Map[String, String])(@transient val sessi
 
   override def buildScan(): RDD[Row] = tf_rdd
 }
+

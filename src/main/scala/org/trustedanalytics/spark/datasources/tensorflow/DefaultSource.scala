@@ -18,14 +18,17 @@ package org.trustedanalytics.spark.datasources.tensorflow
 import org.apache.hadoop.io.{BytesWritable, NullWritable}
 import org.apache.spark.sql._
 import org.apache.spark.sql.sources._
+import org.apache.spark.sql.types.StructType
 import org.tensorflow.hadoop.io.TFRecordFileOutputFormat
 import org.trustedanalytics.spark.datasources.tensorflow.serde.DefaultTfRecordRowEncoder
 
 /**
  * Provides access to TensorFlow record source
  */
-class DefaultSource
-    extends DataSourceRegister with CreatableRelationProvider with RelationProvider {
+class DefaultSource extends DataSourceRegister
+      with CreatableRelationProvider
+      with RelationProvider
+      with SchemaRelationProvider{
 
   /**
    * Short alias for spark-tensorflow data source.
@@ -49,6 +52,12 @@ class DefaultSource
     features.saveAsNewAPIHadoopFile[TFRecordFileOutputFormat](path)
 
     TensorflowRelation(parameters)(sqlContext.sparkSession)
+  }
+
+  override def createRelation(sqlContext: SQLContext,
+                      parameters: Map[String, String],
+                      schema: StructType): BaseRelation = {
+    TensorflowRelation(parameters, Some(schema))(sqlContext.sparkSession)
   }
 
   // Reads TensorFlow Records into DataFrame

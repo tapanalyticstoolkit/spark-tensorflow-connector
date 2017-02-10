@@ -206,3 +206,4 @@ class FeatureDecoderTest extends WordSpec with Matchers {
     }
   }
 }
+

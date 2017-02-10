@@ -50,7 +50,8 @@ class TensorflowSuite extends SharedSparkSessionSuite {
       val df: DataFrame = spark.createDataFrame(rdd, schema)
       df.write.format("tensorflow").save(path)
 
-      val importedDf: DataFrame = spark.read.format("tensorflow").load(path)
+      //If schema is not provided. It will automatically infer schema
+      val importedDf: DataFrame = spark.read.format("tensorflow").schema(schema).load(path)
       val actualDf = importedDf.select("id", "IntegerTypelabel", "LongTypelabel", "FloatTypelabel", "DoubleTypelabel", "vectorlabel", "name").sort("name")
 
       val expectedRows = df.collect()
@@ -206,3 +207,4 @@ class TensorflowSuite extends SharedSparkSessionSuite {
     }
   }
 }
+

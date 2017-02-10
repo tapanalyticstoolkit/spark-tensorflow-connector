@@ -67,3 +67,4 @@ object DefaultTfRecordRowDecoder extends TfRecordRowDecoder {
     Row.fromSeq(row)
   }
 }
+

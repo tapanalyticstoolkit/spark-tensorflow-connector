@@ -1,4 +1,3 @@
-
 /**
  *  Copyright (c) 2016 Intel Corporation 
  *
@@ -43,3 +42,4 @@ class SharedSparkSessionSuite extends SharedSparkSession with BaseSuite {
     super.tearDown()
   }
 }
+

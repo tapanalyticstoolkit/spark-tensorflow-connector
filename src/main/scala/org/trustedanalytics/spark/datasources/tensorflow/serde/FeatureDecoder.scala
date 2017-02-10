@@ -183,3 +183,4 @@ object StringFeatureDecoder extends FeatureDecoder[String] {
     }
   }
 }
+
