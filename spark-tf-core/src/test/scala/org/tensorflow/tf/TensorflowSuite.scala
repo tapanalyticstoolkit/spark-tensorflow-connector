@@ -1,4 +1,3 @@
-
 /**
  * Copyright (c) 2016 Intel Corporation 
  *
@@ -102,7 +101,7 @@ class TensorflowSuite extends SharedSparkSessionSuite {
 
     }
 
-    "Throw null pointer exception for a vector with null values during Encode" in {
+    "Throw an exception for a vector with null values during Encode" in {
       intercept[Exception] {
         val schemaStructType = StructType(Array(
           StructField("vectorlabel", ArrayType(DoubleType, true))

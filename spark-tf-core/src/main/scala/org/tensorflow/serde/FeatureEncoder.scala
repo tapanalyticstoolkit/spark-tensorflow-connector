@@ -71,6 +71,8 @@ object FloatListFeatureEncoder extends FeatureEncoder {
   override def encode(value: Any): Feature = {
     try {
       val floatList = value match {
+        case i: Int => FloatList.newBuilder().addValue(i.toFloat).build()
+        case l: Long => FloatList.newBuilder().addValue(l.toFloat).build()
         case f: Float => FloatList.newBuilder().addValue(f).build()
         case d: Double => FloatList.newBuilder().addValue(d.toFloat).build()
         case arr: scala.collection.mutable.WrappedArray[_] => toFloatList(arr.toArray[Any])
@@ -100,7 +102,7 @@ object FloatListFeatureEncoder extends FeatureEncoder {
 /**
  * Encode input value to ByteList
  */
-object ByteListFeatureEncoder extends FeatureEncoder {
+object BytesListFeatureEncoder extends FeatureEncoder {
   override def encode(value: Any): Feature = {
     try {
       val byteList = BytesList.newBuilder().addValue(ByteString.copyFrom(value.toString.getBytes)).build()

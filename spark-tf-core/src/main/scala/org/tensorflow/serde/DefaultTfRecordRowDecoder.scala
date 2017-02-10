@@ -58,8 +58,8 @@ object DefaultTfRecordRowDecoder extends TfRecordRowDecoder {
           case DoubleType => DoubleFeatureDecoder.decode(feature)
           case ArrayType(IntegerType, true) => IntListFeatureDecoder.decode(feature)
           case ArrayType(LongType, _) => LongListFeatureDecoder.decode(feature)
-          case ArrayType(FloatType, _) => FloatArrayFeatureDecoder.decode(feature)
-          case ArrayType(DoubleType, _) => DoubleArrayFeatureDecoder.decode(feature)
+          case ArrayType(FloatType, _) => FloatListFeatureDecoder.decode(feature)
+          case ArrayType(DoubleType, _) => DoubleListFeatureDecoder.decode(feature)
           case StringType => StringFeatureDecoder.decode(feature)
           case _ => throw new RuntimeException(s"Cannot convert feature to unsupported data type ${colDataType}")
         }

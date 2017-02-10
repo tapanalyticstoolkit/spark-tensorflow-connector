@@ -33,6 +33,7 @@ trait FeatureDecoder[T] {
  */
 object IntFeatureDecoder extends FeatureDecoder[Int] {
   override def decode(feature: Feature): Int = {
+    require(feature.getKindCase.getNumber == Feature.INT64_LIST_FIELD_NUMBER, "Feature must be of type Int64List")
     try {
       val int64List = feature.getInt64List.getValueList
       require(int64List.size() == 1, "Length of Int64List must equal 1")
@@ -46,10 +47,28 @@ object IntFeatureDecoder extends FeatureDecoder[Int] {
 }
 
 /**
+ * Decode TensorFlow "Feature" to Seq[Int]
+ */
+object IntListFeatureDecoder extends FeatureDecoder[Seq[Int]] {
+  override def decode(feature: Feature): Seq[Int] = {
+    require(feature.getKindCase.getNumber == Feature.INT64_LIST_FIELD_NUMBER, "Feature must be of type Int64List")
+    try {
+      val array = feature.getInt64List.getValueList.asScala.toArray
+      array.map(_.toInt)
+    }
+    catch {
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Seq[Int].", ex)
+    }
+  }
+}
+
+/**
  * Decode TensorFlow "Feature" to Long
  */
 object LongFeatureDecoder extends FeatureDecoder[Long] {
   override def decode(feature: Feature): Long = {
+    require(feature.getKindCase.getNumber == Feature.INT64_LIST_FIELD_NUMBER, "Feature must be of type Int64List")
     try {
       val int64List = feature.getInt64List.getValueList
       require(int64List.size() == 1, "Length of Int64List must equal 1")
@@ -63,10 +82,28 @@ object LongFeatureDecoder extends FeatureDecoder[Long] {
 }
 
 /**
+ * Decode TensorFlow "Feature" to Seq[Long]
+ */
+object LongListFeatureDecoder extends FeatureDecoder[Seq[Long]] {
+  override def decode(feature: Feature): Seq[Long] = {
+    require(feature.getKindCase.getNumber == Feature.INT64_LIST_FIELD_NUMBER, "Feature must be of type Int64List")
+    try {
+      val array = feature.getInt64List.getValueList.asScala.toArray
+      array.map(_.toLong)
+    }
+    catch {
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Array[Long].", ex)
+    }
+  }
+}
+
+/**
  * Decode TensorFlow "Feature" to Float
  */
 object FloatFeatureDecoder extends FeatureDecoder[Float] {
   override def decode(feature: Feature): Float = {
+    require(feature.getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER, "Feature must be of type FloatList")
     try {
       val floatList = feature.getFloatList.getValueList
       require(floatList.size() == 1, "Length of FloatList must equal 1")
@@ -80,10 +117,28 @@ object FloatFeatureDecoder extends FeatureDecoder[Float] {
 }
 
 /**
+ * Decode TensorFlow "Feature" to Seq[Float]
+ */
+object FloatListFeatureDecoder extends FeatureDecoder[Seq[Float]] {
+  override def decode(feature: Feature): Seq[Float] = {
+    require(feature.getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER, "Feature must be of type FloatList")
+    try {
+      val array = feature.getFloatList.getValueList.asScala.toArray
+      array.map(_.toFloat)
+    }
+    catch {
+      case ex: Exception =>
+        throw new RuntimeException(s"Cannot convert feature to Array[Float].", ex)
+    }
+  }
+}
+
+/**
  * Decode TensorFlow "Feature" to Double
  */
 object DoubleFeatureDecoder extends FeatureDecoder[Double] {
   override def decode(feature: Feature): Double = {
+    require(feature.getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER, "Feature must be of type FloatList")
     try {
       val floatList = feature.getFloatList.getValueList
       require(floatList.size() == 1, "Length of FloatList must equal 1")
@@ -97,58 +152,11 @@ object DoubleFeatureDecoder extends FeatureDecoder[Double] {
 }
 
 /**
- * Decode TensorFlow "Feature" to Seq[Int]
- */
-object IntListFeatureDecoder extends FeatureDecoder[Seq[Int]] {
-  override def decode(feature: Feature): Seq[Int] = {
-    try {
-      val array = feature.getInt64List.getValueList.asScala.toArray
-      array.map(_.toInt)
-    }
-    catch {
-      case ex: Exception =>
-        throw new RuntimeException(s"Cannot convert feature to Seq[Int].", ex)
-    }
-  }
-}
-
-/**
- * Decode TensorFlow "Feature" to Seq[Long]
- */
-object LongListFeatureDecoder extends FeatureDecoder[Seq[Long]] {
-  override def decode(feature: Feature): Seq[Long] = {
-    try {
-      val array = feature.getInt64List.getValueList.asScala.toArray
-      array.map(_.toLong)
-    }
-    catch {
-      case ex: Exception =>
-        throw new RuntimeException(s"Cannot convert feature to Array[Long].", ex)
-    }
-  }
-}
-
-/**
- * Decode TensorFlow "Feature" to Seq[Float]
- */
-object FloatArrayFeatureDecoder extends FeatureDecoder[Seq[Float]] {
-  override def decode(feature: Feature): Seq[Float] = {
-    try {
-      val array = feature.getFloatList.getValueList.asScala.toArray
-      array.map(_.toFloat)
-    }
-    catch {
-      case ex: Exception =>
-        throw new RuntimeException(s"Cannot convert feature to Array[Float].", ex)
-    }
-  }
-}
-
-/**
  * Decode TensorFlow "Feature" to Seq[Double]
  */
-object DoubleArrayFeatureDecoder extends FeatureDecoder[Seq[Double]] {
+object DoubleListFeatureDecoder extends FeatureDecoder[Seq[Double]] {
   override def decode(feature: Feature): Seq[Double] = {
+    require(feature.getKindCase.getNumber == Feature.FLOAT_LIST_FIELD_NUMBER, "Feature must be of type FloatList")
     try {
       val array = feature.getFloatList.getValueList.asScala.toArray
       array.map(_.toDouble)
@@ -165,6 +173,7 @@ object DoubleArrayFeatureDecoder extends FeatureDecoder[Seq[Double]] {
  */
 object StringFeatureDecoder extends FeatureDecoder[String] {
   override def decode(feature: Feature): String = {
+    require(feature.getKindCase.getNumber == Feature.BYTES_LIST_FIELD_NUMBER, "Feature must be of type ByteList")
     try {
       feature.getBytesList.toByteString.toStringUtf8.trim
     }
