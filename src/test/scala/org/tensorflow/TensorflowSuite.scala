@@ -152,9 +152,6 @@ class TensorflowSuite extends SharedSparkSessionSuite {
     }
 
     "Check infer schema" in {
-      val testRows: Array[Row] = Array(
-        new GenericRow(Array[Any](1, Int.MaxValue + 10L, 10.0F, 14.0F, Vector(1.0), "r1")),
-        new GenericRow(Array[Any](2, 24, 12.0F, Float.MaxValue + 15, Vector(2.0, 2.0), "r2")))
 
       //Build example1
       val intFeature1 = Int64List.newBuilder().addValue(1)
