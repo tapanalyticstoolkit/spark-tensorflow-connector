@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.serde
+package org.trustedanalytics.spark.datasources.tensorflow.serde
 
 import org.scalatest.{Matchers, WordSpec}
 import scala.collection.JavaConverters._

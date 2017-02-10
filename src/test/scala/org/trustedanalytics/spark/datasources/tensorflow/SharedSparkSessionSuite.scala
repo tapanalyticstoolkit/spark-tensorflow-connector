@@ -15,15 +15,14 @@
  *  limitations under the License.
  */
 
-package org.tensorflow
+package org.trustedanalytics.spark.datasources.tensorflow
 
 import java.io.File
 
 import org.apache.commons.io.FileUtils
 import org.apache.spark.SharedSparkSession
-import org.scalatest.{ WordSpecLike, BeforeAndAfterAll, Matchers }
-import org.junit.After
-import org.junit.Before
+import org.junit.{After, Before}
+import org.scalatest.{BeforeAndAfterAll, Matchers, WordSpecLike}
 
 
 trait BaseSuite extends WordSpecLike with Matchers with BeforeAndAfterAll

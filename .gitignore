@@ -3,4 +3,4 @@
 *.jar
 target
 tf-sandbox
-core/spark-warehouse/
+spark-warehouse/

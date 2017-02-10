@@ -13,11 +13,11 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.tensorflow.serde
+package org.trustedanalytics.spark.datasources.tensorflow.serde
 
-import org.tensorflow.DataTypesConvertor
-import org.tensorflow.example.{ BytesList, FloatList, Int64List, Feature }
+import org.tensorflow.example.{BytesList, Feature, FloatList, Int64List}
 import org.tensorflow.hadoop.shaded.protobuf.ByteString
+import org.trustedanalytics.spark.datasources.tensorflow.DataTypesConvertor
 
 trait FeatureEncoder {
   /**

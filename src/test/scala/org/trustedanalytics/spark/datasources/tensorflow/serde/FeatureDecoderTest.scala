@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.tensorflow.serde
+package org.trustedanalytics.spark.datasources.tensorflow.serde
 
 import org.scalatest.{Matchers, WordSpec}
 import org.tensorflow.example.{BytesList, FloatList, Feature, Int64List}

@@ -13,13 +13,13 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.tensorflow
+package org.trustedanalytics.spark.datasources.tensorflow
 
-import org.apache.hadoop.io.{ BytesWritable, NullWritable }
+import org.apache.hadoop.io.{BytesWritable, NullWritable}
 import org.apache.spark.sql._
 import org.apache.spark.sql.sources._
 import org.tensorflow.hadoop.io.TFRecordFileOutputFormat
-import org.tensorflow.serde.DefaultTfRecordRowEncoder
+import org.trustedanalytics.spark.datasources.tensorflow.serde.DefaultTfRecordRowEncoder
 
 /**
  * Provides access to TensorFlow record source
