@@ -24,7 +24,8 @@ trait TfRecordRowDecoder {
   /**
    * Decodes each TensorFlow "Example" as DataFrame "Row"
    *
-   * Maps each feature in Example to element in Row with DataType based on custom schema or default mapping of Int64List, FloatList, BytesList to column data type
+   * Maps each feature in Example to element in Row with DataType based on custom schema or
+   * default mapping of Int64List, FloatList, BytesList to column data type
    *
    * @param example TensorFlow Example to decode
    * @param schema Decode Example using specified schema
@@ -35,6 +36,15 @@ trait TfRecordRowDecoder {
 
 object DefaultTfRecordRowDecoder extends TfRecordRowDecoder {
 
+  /**
+   * Decodes each TensorFlow "Example" as DataFrame "Row"
+   *
+   * Maps each feature in Example to element in Row with DataType based on custom schema
+   *
+   * @param example TensorFlow Example to decode
+   * @param schema Decode Example using specified schema
+   * @return a DataFrame row
+   */
   def decodeTfRecord(example: Example, schema: StructType): Row = {
     val row = Array.fill[Any](schema.length)(null)
     example.getFeatures.getFeatureMap.asScala.foreach {
@@ -42,38 +52,16 @@ object DefaultTfRecordRowDecoder extends TfRecordRowDecoder {
         val index = schema.fieldIndex(featureName)
         val colDataType = schema.fields(index).dataType
         row(index) = colDataType match {
-          case dtype if dtype.equals(IntegerType) | dtype.equals(LongType) => {
-            val dataList = feature.getInt64List.getValueList
-            if (dataList.size() == 1) {
-              val p = dataList.get(0)
-              p.intValue()
-            }
-            else
-              throw new RuntimeException("Mismatch in schema type, expected int32 or int64")
-          }
-          case dtype if dtype.equals(FloatType) | dtype.equals(DoubleType) => {
-            val dataList = feature.getFloatList.getValueList
-            if (dataList.size() == 1) {
-              val p = dataList.get(0)
-              p.floatValue()
-            }
-            else
-              throw new RuntimeException("Mismatch in schema type, expected float32 or float64")
-          }
-          case vtype: ArrayType => {
-            feature.getKindCase.getNumber match {
-              case Feature.INT64_LIST_FIELD_NUMBER => {
-                val dataList = feature.getInt64List.getValueList.asScala.toList
-                dataList
-              }
-              case Feature.FLOAT_LIST_FIELD_NUMBER => {
-                val dataList = feature.getFloatList.getValueList.asScala.toList
-                dataList
-              }
-            }
-          }
-          case dtype if dtype.equals(StringType) => feature.getBytesList.toByteString.toStringUtf8.trim
-          case _ => throw new RuntimeException("Unsupported dataype...!!")
+          case IntegerType => IntFeatureDecoder.decode(feature)
+          case LongType => LongFeatureDecoder.decode(feature)
+          case FloatType => FloatFeatureDecoder.decode(feature)
+          case DoubleType => DoubleFeatureDecoder.decode(feature)
+          case ArrayType(IntegerType, true) => IntListFeatureDecoder.decode(feature)
+          case ArrayType(LongType, _) => LongListFeatureDecoder.decode(feature)
+          case ArrayType(FloatType, _) => FloatListFeatureDecoder.decode(feature)
+          case ArrayType(DoubleType, _) => DoubleListFeatureDecoder.decode(feature)
+          case StringType => StringFeatureDecoder.decode(feature)
+          case _ => throw new RuntimeException(s"Cannot convert feature to unsupported data type ${colDataType}")
         }
     }
     Row.fromSeq(row)

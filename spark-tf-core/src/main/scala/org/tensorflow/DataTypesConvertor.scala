@@ -22,6 +22,19 @@ import scala.language.implicitConversions
  */
 object DataTypesConvertor {
 
+  def toLong(value: Any): Long = {
+    value match {
+      case null => throw new IllegalArgumentException("null cannot be converted to Long")
+      case i: Int => i.toLong
+      case l: Long => l
+      case f: Float => f.toLong
+      case d: Double => d.toLong
+      case bd: BigDecimal => bd.toLong
+      case s: String => s.trim().toLong
+      case _ => throw new RuntimeException(s"${value.getClass.getName} toLong is not implemented")
+    }
+  }
+
   def toFloat(value: Any): Float = {
     value match {
       case null => throw new IllegalArgumentException("null cannot be converted to Float")
