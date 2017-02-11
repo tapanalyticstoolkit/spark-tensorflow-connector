@@ -1,8 +1,8 @@
 # spark-tensorflow-connector
 
 This repo contains a library for loading and storing TensorFlow records with [Apache Spark](http://spark.apache.org/).
-The library implements data import from the standard TensorFlow record format ([TFRecords]( https://www.tensorflow.org/how_tos/reading_data/))
-into Spark SQL DataFrames, and data export from DataFrames to TensorFlow records.
+The library implements data import from the standard TensorFlow record format ([TFRecords]
+(https://www.tensorflow.org/how_tos/reading_data/)) into Spark SQL DataFrames, and data export from DataFrames to TensorFlow records.
 
 ## What's new
 
@@ -26,8 +26,7 @@ mvn clean install
 ```
 
 ## Using Spark Shell
-Run this library in Spark using the `--jars` command line option in `spark-shell` or `spark-submit`. The following
-command demonstrates how to use the library in Spark shell.
+Run this library in Spark using the `--jars` command line option in `spark-shell` or `spark-submit`. For example:
 
 ```sh
 $SPARK_HOME/bin/spark-shell --jars target/spark-tensorflow-connector-1.0-SNAPSHOT.jar,target/lib/tensorflow-hadoop-1.0-01232017-SNAPSHOT-shaded-protobuf.jar
