@@ -1,7 +1,5 @@
 language: scala
 
-sudo: false
-
 # Cache settings here are based on latest SBT documentation.
 cache:
   directories:
