@@ -6,5 +6,5 @@ target
 tf-sandbox
 spark-warehouse/
 metastore_db/
-derby.log
 project/project/
+test-output.tfr
