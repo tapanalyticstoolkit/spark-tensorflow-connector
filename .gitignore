@@ -7,6 +7,4 @@ tf-sandbox
 spark-warehouse/
 metastore_db/
 derby.log
-dependencyTree.txt
-effective-pom.xml
-build
+project/project/
