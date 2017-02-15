@@ -1,10 +1,13 @@
 language: scala
+
 sudo: false
+
 # Cache settings here are based on latest SBT documentation.
 cache:
   directories:
     - $HOME/.ivy2/cache
     - $HOME/.sbt/boot/
+
 before_cache:
   # Tricks to avoid unnecessary cache updates
   - find $HOME/.ivy2 -name "ivydata-*.properties" -delete
