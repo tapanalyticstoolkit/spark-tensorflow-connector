@@ -6,3 +6,5 @@ target
 tf-sandbox
 spark-warehouse/
 metastore_db/
+project/project/
+test-output.tfr
