@@ -15,9 +15,8 @@
  */
 package org.trustedanalytics.spark.datasources.tensorflow.serde
 
-import com.google.protobuf.ByteString
 import org.tensorflow.example.{BytesList, Feature, FloatList, Int64List}
-//import org.tensorflow.hadoop.shaded.protobuf.ByteString
+import org.tensorflow.hadoop.shaded.protobuf.ByteString
 import org.trustedanalytics.spark.datasources.tensorflow.DataTypesConvertor
 
 trait FeatureEncoder {

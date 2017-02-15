@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tapanalyticstoolkit/spark-tensorflow-connector.svg?branch=sbt)](https://travis-ci.org/tapanalyticstoolkit/spark-tensorflow-connector)
+
 # spark-tensorflow-connector
 
 This repo contains a library for loading and storing TensorFlow records with [Apache Spark](http://spark.apache.org/).
