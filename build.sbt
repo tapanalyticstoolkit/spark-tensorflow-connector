@@ -19,7 +19,7 @@ val `org.apache.spark_spark-mllib_2.11` = "org.apache.spark" % "spark-mllib_2.11
 
 val `org.scalatest_scalatest_2.11` = "org.scalatest" % "scalatest_2.11" % "2.2.6"
 
-val `org.tensorflow_tensorflow-hadoop` = "org.tensorflow" % "tensorflow-hadoop" % "1.0-01232017-SNAPSHOT"
+val `org.tensorflow_tensorflow-hadoop` = "org.tensorflow" % "tensorflow-hadoop" % "1.0-01232017-SNAPSHOT" classifier "shaded-protobuf"
 
 
 version := "1.0-SNAPSHOT"
