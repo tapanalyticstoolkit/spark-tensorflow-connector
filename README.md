@@ -21,17 +21,32 @@ None.
 2. [Apache Maven](https://maven.apache.org/)
 
 ## Building the library
-Build the library using Maven as shown below.
+You can build library using both Maven and SBT build tools
+
+#### Maven
+Build the library using Maven(3.3) as shown below
 
 ```sh
 mvn clean install
 ```
 
+#### SBT 
+Build the library using SBT(0.13.13) as show below
+```sh
+sbt clean assembly
+```
+
 ## Using Spark Shell
 Run this library in Spark using the `--jars` command line option in `spark-shell` or `spark-submit`. For example:
 
+Maven Jars
 ```sh
 $SPARK_HOME/bin/spark-shell --jars target/spark-tensorflow-connector-1.0-SNAPSHOT.jar,target/lib/tensorflow-hadoop-1.0-01232017-SNAPSHOT-shaded-protobuf.jar
+```
+
+SBT Jars
+```sh
+$SPARK_HOME/bin/spark-shell --jars target/scala-2.11/spark-tensorflow-connector-assembly-1.0-SNAPSHOT.jar
 ```
 
 The following code snippet demonstrates usage.
@@ -42,7 +57,7 @@ import org.apache.spark.sql.{ DataFrame, Row }
 import org.apache.spark.sql.catalyst.expressions.GenericRow
 import org.apache.spark.sql.types._
 
-val path = s"$TF_SANDBOX_DIR/test-output.tfr"
+val path = "test-output.tfr"
 val testRows: Array[Row] = Array(
 new GenericRow(Array[Any](11, 1, 23L, 10.0F, 14.0, List(1.0, 2.0), "r1")),
 new GenericRow(Array[Any](21, 2, 24L, 12.0F, 15.0, List(2.0, 2.0), "r2")))
