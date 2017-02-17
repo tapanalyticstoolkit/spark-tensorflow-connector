@@ -85,6 +85,6 @@ pomExtra :=
 credentials += Credentials(
   "Spark Packages Realm",
   "spark-packages.org",
-  "karthikvadla",
-  "d476a8318386fbf634c1dfc7cbb9893583b458c0")
+  "$GITHUB-USERNAME",
+  "$GITHUB-PERSPNAL-TOKEN") //provide your personal token
 
