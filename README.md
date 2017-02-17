@@ -46,7 +46,7 @@ $SPARK_HOME/bin/spark-shell --jars target/spark-tensorflow-connector-1.0-SNAPSHO
 
 SBT Jars
 ```sh
-$SPARK_HOME/bin/spark-shell --jars target/scala-2.11/spark-tensorflow-connector-assembly-1.0-SNAPSHOT.jar
+$SPARK_HOME/bin/spark-shell --jars target/scala-2.11/spark-tensorflow-connector-assembly-1.0.0.jar
 ```
 
 The following code snippet demonstrates usage.

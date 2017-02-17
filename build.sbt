@@ -1,4 +1,18 @@
+name := "spark-tensorflow-connector"
+
+organization := "org.trustedanalytics"
+
 scalaVersion in Global := "2.11.8"
+
+spName := "trustedanalytics/spark-tensorflow-connector"
+
+sparkVersion := "2.1.0"
+
+sparkComponents ++= Seq("sql", "mllib")
+
+spIgnoreProvided := true
+
+version := "1.0.0"
 
 def ProjectName(name: String,path:String): Project =  Project(name, file(path))
 
@@ -20,21 +34,6 @@ val `org.scalatest_scalatest_2.11` = "org.scalatest" % "scalatest_2.11" % "2.2.6
 
 val `org.tensorflow_tensorflow-hadoop` = "org.tensorflow" % "tensorflow-hadoop" % "1.0-01232017-SNAPSHOT"
 
-
-spName := "spark-tensorflow-connector"
-
-sparkVersion := "2.1.0"
-
-sparkComponents ++= Seq("sql", "mllib")
-
-spIgnoreProvided := true
-
-version := "1.0-SNAPSHOT"
-
-name := "spark-tensorflow-connector"
-
-organization := "org.trustedanalytics"
-
 libraryDependencies in Global ++= Seq(`org.tensorflow_tensorflow-hadoop` classifier "shaded-protobuf",
    `org.scalatest_scalatest_2.11` % "test" ,
    `org.apache.spark_spark-sql_2.11` % "provided" ,
@@ -50,3 +49,41 @@ assemblyExcludedJars in assembly := {
 }
 
 licenses := Seq("Apache License 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"))
+
+/********************
+  * Release settings *
+  ********************/
+
+publishMavenStyle := true
+
+licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0"))
+
+pomExtra :=
+  <url>https://github.com/tapanalyticstoolkit/spark-tensorflow-connector</url>
+    <scm>
+      <url>git@github.com:tapanalyticstoolkit/spark-tensorflow-connector.git</url>
+      <connection>scm:git:git@github.com:tapanalyticstoolkit/spark-tensorflow-connector.git</connection>
+    </scm>
+    <developers>
+      <developer>
+        <id>karthikvadla</id>
+        <name>Karthik Vadla</name>
+        <url>https://github.com/karthikvadla</url>
+      </developer>
+      <developer>
+        <id>skavulya</id>
+        <name>Soila Kavulya</name>
+        <url>https://github.com/skavulya</url>
+      </developer>
+      <developer>
+        <id>joyeshmishra</id>
+        <name>Joyesh Mishra</name>
+        <url>https://github.com/joyeshmishra</url>
+      </developer>
+    </developers>
+
+credentials += Credentials(
+  "Spark Packages Realm",
+  "spark-packages.org",
+  "$GITHUB-USERNAME",
+  "$GITHUB-PERSPNAL-TOKEN") //provide your personal token
