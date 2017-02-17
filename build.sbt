@@ -87,4 +87,3 @@ credentials += Credentials(
   "spark-packages.org",
   "$GITHUB-USERNAME",
   "$GITHUB-PERSPNAL-TOKEN") //provide your personal token
-
