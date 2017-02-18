@@ -87,12 +87,9 @@ pomExtra :=
       </developer>
     </developers>
 
-
 credentials += Credentials(Path.userHome / ".ivy2" / ".sbtcredentials") // A file containing credentials
 
 // Add assembly jar to Spark package
 test in assembly := {}
 
 spShade := true
-
-assembly in spPackage := assembly.value
