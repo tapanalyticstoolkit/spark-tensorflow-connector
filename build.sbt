@@ -87,15 +87,9 @@ pomExtra :=
       </developer>
     </developers>
 
-credentials += Credentials(
-  "Spark Packages Realm",
-  "spark-packages.org",
-  "$GITHUB-USERNAME",
-  "$GITHUB-PERSPNAL-TOKEN") //provide your personal token
+credentials += Credentials(Path.userHome / ".ivy2" / ".sbtcredentials") // A file containing credentials
 
 // Add assembly jar to Spark package
 test in assembly := {}
 
 spShade := true
-
-assembly in spPackage := assembly.value
