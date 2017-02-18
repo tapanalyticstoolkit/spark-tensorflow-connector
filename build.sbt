@@ -10,8 +10,6 @@ sparkVersion := "2.1.0"
 
 sparkComponents ++= Seq("sql", "mllib")
 
-spIgnoreProvided := true
-
 version := "1.0.0"
 
 def ProjectName(name: String,path:String): Project =  Project(name, file(path))
@@ -54,6 +52,13 @@ licenses := Seq("Apache License 2.0" -> url("http://www.apache.org/licenses/LICE
   * Release settings *
   ********************/
 
+spIgnoreProvided := true
+
+spAppendScalaVersion := true
+
+// If you published your package to Maven Central for this release (must be done prior to spPublish)
+spIncludeMaven := false
+
 publishMavenStyle := true
 
 licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0"))
@@ -87,3 +92,10 @@ credentials += Credentials(
   "spark-packages.org",
   "$GITHUB-USERNAME",
   "$GITHUB-PERSPNAL-TOKEN") //provide your personal token
+
+// Add assembly jar to Spark package
+test in assembly := {}
+
+spShade := true
+
+assembly in spPackage := assembly.value
