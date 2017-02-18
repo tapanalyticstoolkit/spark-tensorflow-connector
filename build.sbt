@@ -46,8 +46,6 @@ assemblyExcludedJars in assembly := {
     "tensorflow-hadoop-1.0-01232017-SNAPSHOT-shaded-protobuf.jar").contains(x.data.getName)}
 }
 
-licenses := Seq("Apache License 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"))
-
 /********************
   * Release settings *
   ********************/
