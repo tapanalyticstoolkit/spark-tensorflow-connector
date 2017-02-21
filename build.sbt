@@ -91,5 +91,3 @@ credentials += Credentials(Path.userHome / ".ivy2" / ".sbtcredentials") // A fil
 test in assembly := {}
 
 spShade := true
-
-publishTo := Some("Artifactory Realm" at "https://github.com/tapanalyticstoolkit/spark-tensorflow-connector")
