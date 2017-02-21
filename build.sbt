@@ -4,7 +4,7 @@ organization := "org.trustedanalytics"
 
 scalaVersion in Global := "2.11.8"
 
-spName := "trustedanalytics/spark-tensorflow-connector"
+spName := "tapanalyticstoolkit/spark-tensorflow-connector"
 
 sparkVersion := "2.1.0"
 
@@ -91,3 +91,5 @@ credentials += Credentials(Path.userHome / ".ivy2" / ".sbtcredentials") // A fil
 test in assembly := {}
 
 spShade := true
+
+publishTo := Some("Artifactory Realm" at "https://tapanalyticstoolkit/spark-tensorflow-connector")
